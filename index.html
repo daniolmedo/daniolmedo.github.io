@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><text x='50' y='66' font-family='Arial Black,sans-serif' font-size='38' font-weight='900' fill='%23F0EDE4' text-anchor='middle' letter-spacing='-1'>DO</text></svg>">
     <style>
         /* ─── TOKENS ─────────────────────────────── */
         :root {
             --cream:   #F0EDE4;
             --black:   #0A0A0A;
-            --green:   #1C3828;
+            --green:   #111111;
             --muted:   #8A8680;
             --subtle:  #DEDAD2;
             --border:  rgba(10,10,10,0.10);
@@ -332,7 +333,7 @@
             margin-top: 1.25rem;
             padding: 1rem 1.25rem;
             border-left: 2px solid var(--green);
-            background: rgba(28,56,40,0.04);
+            background: rgba(10,10,10,0.04);
         }
         .case-insight p {
             font-size: 0.82rem;
@@ -413,6 +414,45 @@
         }
         .article:last-child { border-right: none; }
         .article:hover { background: rgba(10,10,10,0.025); }
+
+        /* Sport image block */
+        .article-img {
+            height: 180px;
+            margin: -3rem -3.5rem 2.25rem;
+            position: relative;
+            overflow: hidden;
+            background: var(--black);
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem 1.5rem;
+        }
+        .article-img-word {
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.5rem;
+            line-height: 1;
+            color: rgba(240,237,228,0.06);
+            top: 50%;
+            left: 1.5rem;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+        }
+        .article-img-tag {
+            position: relative;
+            font-size: 0.58rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(240,237,228,0.40);
+            font-weight: 600;
+        }
+        .article-img-line {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: rgba(240,237,228,0.08);
+        }
+
         .article-badge {
             display: inline-block;
             font-size: 0.62rem;
@@ -420,7 +460,7 @@
             text-transform: uppercase;
             font-weight: 600;
             color: var(--green);
-            background: rgba(28,56,40,0.08);
+            background: rgba(10,10,10,0.08);
             padding: 0.25rem 0.6rem;
             margin-bottom: 1.25rem;
         }
@@ -580,6 +620,7 @@
             .articles { grid-template-columns: 1fr; }
             .article { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
             .article:last-child { border-bottom: none; }
+            .article-img { margin: -2.5rem -1.5rem 2rem; height: 150px; }
 
             .contact { grid-template-columns: 1fr; }
             .contact-left { padding: 3.5rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(240,237,228,0.1); }
@@ -615,7 +656,7 @@
 <!-- ═══ HERO ═══════════════════════════════════════════════ -->
 <section class="hero">
     <div class="hero-text">
-        <span class="hero-eyebrow">Santiago, Chile · Consultor independiente</span>
+        <span class="hero-eyebrow">Santiago, Chile · Advisor</span>
         <h1>GROWTH.<br>DISEÑO.<br>PRODUCTO.</h1>
         <p class="hero-subtitle">Los tres, con la misma lógica.</p>
         <p class="hero-sub">Para founders que saben adónde quieren ir y necesitan a alguien que entienda cómo conectar el crecimiento, la experiencia y la marca.</p>
@@ -764,18 +805,33 @@
     </div>
     <div class="articles">
         <div class="article">
+            <div class="article-img">
+                <span class="article-img-word">WEIGHTLIFTING</span>
+                <span class="article-img-tag">#WEIGHTLIFTING</span>
+                <div class="article-img-line"></div>
+            </div>
             <span class="article-badge">Próximamente</span>
             <div class="article-title">POR QUÉ SEPARAR GROWTH DE DISEÑO ES EL ERROR MÁS COSTOSO DE UNA STARTUP</div>
             <p class="article-excerpt">Tienes un equipo de performance corriendo ads y un diseñador haciendo la marca. ¿Cuándo fue la última vez que los pusiste en la misma sala a hablar de la misma métrica?</p>
             <a href="#" class="article-link">Leer →</a>
         </div>
         <div class="article">
+            <div class="article-img">
+                <span class="article-img-word">RELAY RACE</span>
+                <span class="article-img-tag">#RELAY RACE</span>
+                <div class="article-img-line"></div>
+            </div>
             <span class="article-badge">Próximamente</span>
             <div class="article-title">LO QUE APRENDÍ CORRIENDO PERFORMANCE EN 7 PAÍSES AL MISMO TIEMPO</div>
             <p class="article-excerpt">Cada mercado tiene su propia lógica. El error más común es asumir que lo que escaló en Chile va a escalar en México. Spoiler: casi nunca.</p>
             <a href="#" class="article-link">Leer →</a>
         </div>
         <div class="article">
+            <div class="article-img">
+                <span class="article-img-word">MARATHON</span>
+                <span class="article-img-tag">#MARATHON</span>
+                <div class="article-img-line"></div>
+            </div>
             <span class="article-badge">Próximamente</span>
             <div class="article-title">EL FOUNDER QUE NO ENTIENDE SU FUNNEL DE PRODUCTO NUNCA VA A ESCALAR</div>
             <p class="article-excerpt">El problema no es la adquisición. Es lo que pasa después del clic — y la mayoría no lo mira hasta que el CAC se va a las nubes.</p>
@@ -802,12 +858,14 @@
                 <span>Escríbeme un correo</span>
                 <span>✉</span>
             </a>
-            <a href="https://calendly.com/dani-olmedo" target="_blank" rel="noopener" class="btn-light" style="background:transparent; color:var(--cream); border:1px solid rgba(240,237,228,0.3); justify-content:space-between;">
-                <span>Agendemos un café</span>
-                <span>☕</span>
+            <!-- Reemplaza la URL con tu link de Google Calendar Appointment Schedule:
+                 Calendar → Appointment schedules → Crear → copiar el booking link -->
+            <a href="https://calendar.google.com/calendar/appointments" target="_blank" rel="noopener" class="btn-light" style="background:transparent; color:var(--cream); border:1px solid rgba(240,237,228,0.3); justify-content:space-between;">
+                <span>Agendemos una llamada</span>
+                <span>📅</span>
             </a>
         </div>
-        <a href="https://www.linkedin.com/in/danielolmedofuentes" target="_blank" rel="noopener" style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(240,237,228,0.4); text-decoration:none; font-weight:500; border-bottom:1px solid rgba(240,237,228,0.2); padding-bottom:0.1rem;">LinkedIn ↗</a>
+        <a href="https://www.linkedin.com/in/dani-olmedo" target="_blank" rel="noopener" style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(240,237,228,0.4); text-decoration:none; font-weight:500; border-bottom:1px solid rgba(240,237,228,0.2); padding-bottom:0.1rem;">LinkedIn ↗</a>
     </div>
 </section>
 
