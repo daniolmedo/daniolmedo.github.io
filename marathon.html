@@ -39,6 +39,21 @@
         .btn-light { display:inline-flex; align-items:center; justify-content:space-between; gap:0.65rem; background:var(--cream); color:var(--green); padding:0.9rem 1.85rem; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; font-weight:600; transition:opacity 0.2s; }
         .btn-light:hover { opacity:0.85; }
         .footer-bar { background:var(--green); border-top:1px solid rgba(240,237,228,0.08); padding:1.5rem 3.5rem; display:flex; justify-content:space-between; align-items:center; color:rgba(240,237,228,0.3); font-size:0.68rem; letter-spacing:0.1em; }
+        .article-author{display:flex;align-items:center;gap:1rem;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+        .author-chip{width:34px;height:34px;background:var(--black);color:var(--cream);font-family:'Bebas Neue',sans-serif;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+        .author-details{display:flex;flex-direction:column;gap:0.15rem;}
+        .author-link{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--black);text-decoration:none;}.author-link:hover{opacity:0.5;}
+        .author-tagline{font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;}
+        .article-share{display:flex;align-items:center;gap:0.65rem;flex-wrap:wrap;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
+        .share-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-right:0.25rem;}
+        .share-btn{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--black);text-decoration:none;padding:0.45rem 0.85rem;border:1px solid rgba(10,10,10,0.18);transition:background 0.15s,color 0.15s;white-space:nowrap;cursor:pointer;background:transparent;font-family:inherit;}
+        .share-btn:hover{background:var(--black);color:var(--cream);}
+        .article-collab{margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--border);display:none;}
+        .article-collab:has(.collab-person){display:block;}
+        .collab-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:0.65rem;}
+        .collab-list{display:flex;flex-wrap:wrap;gap:0.5rem;}
+        .collab-person{font-size:0.7rem;letter-spacing:0.08em;font-weight:500;color:var(--black);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid rgba(10,10,10,0.18);transition:background 0.15s,color 0.15s;}
+        .collab-person:hover{background:var(--black);color:var(--cream);}
         @media (max-width:900px) { nav { padding:1.25rem 1.5rem; } .photo-overlay { padding:2rem 1.5rem; } .article-wrap { padding:3rem 1.5rem 3rem; } .article-cta { grid-template-columns:1fr; padding:3.5rem 1.5rem; gap:2rem; } .footer-bar { padding:1.25rem 1.5rem; flex-direction:column; gap:0.5rem; text-align:center; } }
     </style>
 </head>
@@ -62,6 +77,14 @@
 
 <div class="article-wrap">
     <h1 class="article-title">EL FOUNDER QUE NO ENTIENDE SU FUNNEL DE PRODUCTO NUNCA VA A ESCALAR</h1>
+
+    <div class="article-author">
+        <div class="author-chip">DO</div>
+        <div class="author-details">
+            <a href="https://www.linkedin.com/in/daniolmedo/" target="_blank" rel="noopener" class="author-link">Dani Olmedo</a>
+            <span class="author-tagline">Growth · Diseño · Producto</span>
+        </div>
+    </div>
 
     <div class="article-body">
         <p>La mayoría de los founders llegan con el mismo diagnóstico cuando algo no funciona: necesitamos más tráfico.</p>
@@ -102,6 +125,21 @@
 
         <div class="article-insight">
             <p>El problema casi nunca es el tráfico. Es lo que le pasa al tráfico después de que llega. Y la única forma de saberlo es mirarlo con la frecuencia y la velocidad correctas.</p>
+        </div>
+
+        <div class="article-share">
+            <span class="share-label">Compartir</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdaniolmedo.github.io%2Fmarathon.html" target="_blank" rel="noopener" class="share-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdaniolmedo.github.io%2Fmarathon.html&text=El+founder+que+no+entiende+su+funnel+de+producto+nunca+va+a+escalar" target="_blank" rel="noopener" class="share-btn">X / Twitter</a>
+            <a href="https://wa.me/?text=El+founder+que+no+entiende+su+funnel+de+producto+nunca+va+a+escalar+%E2%86%92+https%3A%2F%2Fdaniolmedo.github.io%2Fmarathon.html" target="_blank" rel="noopener" class="share-btn">WhatsApp</a>
+            <button class="share-btn" onclick="navigator.clipboard.writeText('https://daniolmedo.github.io/marathon.html').then(()=>{this.textContent='¡Copiado!';setTimeout(()=>this.textContent='Copiar link',1500)})">Copiar link</button>
+        </div>
+
+        <div class="article-collab">
+            <span class="collab-label">En este proyecto</span>
+            <div class="collab-list">
+                <!-- Para agregar colaboradores: <a href="https://linkedin.com/in/..." target="_blank" rel="noopener" class="collab-person">Nombre Apellido</a> -->
+            </div>
         </div>
     </div>
 </div>
