@@ -10,30 +10,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conectar un valor real con el usuario correcto — Dani Olmedo</title>
-    <meta name="description" content="Cómo construimos los mensajes de adquisición de Cornershop cuando nadie nos conocía aún. Un proceso de iteración entre marketing y diseño.">
-    <meta property="og:title" content="Conectar un valor real con el usuario correcto — Dani Olmedo">
-    <meta property="og:description" content="Cómo construimos los mensajes de adquisición de Cornershop cuando nadie nos conocía aún. Un proceso de iteración entre marketing y diseño.">
-    <meta property="og:image" content="https://daniolmedo.com/ADS_POP_HQ_2018_5.png">
-    <meta property="og:url" content="https://daniolmedo.com/trabajo/cornershop-mensajes-adquisicion/">
-    <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Conectar un valor real con el usuario correcto — Dani Olmedo">
-    <meta name="twitter:description" content="Cómo construimos los mensajes de adquisición de Cornershop cuando nadie nos conocía aún. Un proceso de iteración entre marketing y diseño.">
-    <meta name="twitter:image" content="https://daniolmedo.com/ADS_POP_HQ_2018_5.png">
+    <title>Dani Olmedo — Growth · Diseño · Producto</title>
+    <meta name="description" content="Consultor de marketing digital y growth para founders y startups en Chile. 14 años entre performance, diseño de producto y estrategia de marca. Ex Cornershop · Ex Groupon LatAm.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dani Olmedo",
+      "alternateName": "Daniel Olmedo Fuentes",
+      "jobTitle": "Consultor de Marketing Digital y Growth",
+      "description": "Consultor de marketing digital, growth y diseño de producto para founders y startups en Chile. Ex Cornershop by Uber · Ex Groupon LatAm.",
+      "url": "https://daniolmedo.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/danielolmedofuentes/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santiago",
+        "addressCountry": "CL"
+      },
+      "knowsAbout": [
+        "Marketing Digital",
+        "Growth Marketing",
+        "Performance Marketing",
+        "Google Ads",
+        "Meta Ads",
+        "SEM",
+        "Diseño de Producto",
+        "UX/UI",
+        "Estrategia de Marca",
+        "Funnels de Conversión",
+        "Startups",
+        "Expansión Regional"
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><text x='50' y='66' font-family='Arial Black,sans-serif' font-size='38' font-weight='900' fill='%23F0EDE4' text-anchor='middle' letter-spacing='-1'>DO</text></svg>">
     <style>
+        /* ─── TOKENS ─────────────────────────────── */
         :root {
-            --cream:  #F0EDE4;
-            --black:  #0A0A0A;
-            --green:  #111111;
-            --muted:  #8A8680;
-            --subtle: #DEDAD2;
-            --border: rgba(10,10,10,0.10);
+            --cream:   #F0EDE4;
+            --black:   #0A0A0A;
+            --green:   #111111;
+            --muted:   #8A8680;
+            --subtle:  #DEDAD2;
+            --border:  rgba(10,10,10,0.10);
         }
+
+        /* ─── RESET ──────────────────────────────── */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body {
@@ -46,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             overflow-x: hidden;
         }
 
-        /* ─── NAV ─── */
+        /* ─── NAV ────────────────────────────────── */
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -55,8 +82,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 3rem;
+            transition: background 0.3s, border-color 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+        nav.scrolled {
             background: var(--cream);
-            border-bottom: 1px solid var(--border);
+            border-bottom-color: var(--border);
         }
         .nav-logo {
             font-family: 'Bebas Neue', sans-serif;
@@ -65,165 +96,505 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             text-decoration: none;
             color: var(--black);
         }
-        .nav-back {
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links a {
             font-size: 0.72rem;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             text-decoration: none;
-            color: var(--muted);
+            color: var(--black);
             font-weight: 500;
             transition: opacity 0.2s;
         }
-        .nav-back:hover { opacity: 0.5; }
+        .nav-links a:hover { opacity: 0.4; }
 
-        /* ─── PHOTO HEADER ─── */
-        .article-photo {
-            margin-top: 65px;
-            width: 100%;
-            height: 62vh;
-            min-height: 380px;
-            background: var(--black);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: flex-end;
+        /* ─── HERO ───────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 55% 45%;
+            border-bottom: 1px solid var(--border);
         }
-        /* Para agregar tu foto: reemplaza el div.photo-placeholder por:
-           <img src="tu-foto.jpg" style="width:100%;height:100%;object-fit:cover;opacity:0.7;"> */
-        .photo-placeholder {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            inset: 0;
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 9rem 3.5rem 3.5rem;
+            border-right: 1px solid var(--border);
+        }
+        .hero-eyebrow {
             display: flex;
             align-items: center;
-            justify-content: center;
-        }
-        .photo-bg-word {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(6rem, 14vw, 16rem);
-            color: rgba(240,237,228,0.04);
-            letter-spacing: 0.04em;
-            line-height: 1;
-            user-select: none;
-        }
-        .photo-overlay {
-            position: relative;
-            z-index: 2;
-            padding: 2.5rem 4rem;
-            width: 100%;
-        }
-        .article-case-num {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.3em;
-            color: rgba(240,237,228,0.35);
-            margin-bottom: 0.5rem;
-        }
-        .article-header-tag {
-            font-size: 0.62rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: rgba(240,237,228,0.45);
-            font-weight: 500;
-        }
-
-        /* ─── ARTICLE BODY ─── */
-        .article-wrap {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 5rem 2rem 4rem;
-        }
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.62rem;
+            gap: 1rem;
+            font-size: 0.7rem;
             letter-spacing: 0.18em;
             text-transform: uppercase;
             color: var(--muted);
             font-weight: 500;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
-        .article-meta span + span::before {
-            content: '·';
-            margin-right: 0.75rem;
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 2.5rem;
+            height: 1px;
+            background: var(--muted);
+        }
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(5.5rem, 9.5vw, 10rem);
+            line-height: 0.9;
+            letter-spacing: 0.01em;
+            margin-bottom: 0.3rem;
+        }
+        .hero-subtitle {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.4rem, 2.2vw, 2rem);
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+        }
+        .hero-sub {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: #5A5652;
+            max-width: 42ch;
+            line-height: 1.75;
+            margin-bottom: 3rem;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--black);
+            color: var(--cream);
+            padding: 0.9rem 1.85rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.25s;
+        }
+        .btn-primary:hover { background: var(--green); }
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+            padding-bottom: 0.15rem;
+            border-bottom: 1px solid currentColor;
+            transition: opacity 0.2s;
+        }
+        .btn-ghost:hover { opacity: 0.45; }
+
+        /* Hero photo */
+        .hero-photo {
+            position: relative;
+            overflow: hidden;
+            background: var(--green);
+        }
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            filter: grayscale(15%);
+        }
+        .hero-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--green);
+            color: rgba(240,237,228,0.25);
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            gap: 0.75rem;
+        }
+        .hero-photo-placeholder svg {
+            width: 2rem;
+            height: 2rem;
+            opacity: 0.2;
+        }
+
+        /* ─── STATS BAR ──────────────────────────── */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 1px solid var(--border);
+        }
+        .stat {
+            padding: 2.25rem 3rem;
+            border-right: 1px solid var(--border);
+        }
+        .stat:last-child { border-right: none; }
+        .stat-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.25rem;
+            line-height: 1;
+            margin-bottom: 0.2rem;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        /* ─── POV ────────────────────────────────── */
+        .pov {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+        .pov-sidebar {
+            border-right: 1px solid var(--border);
+            padding: 4rem 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 4.5rem;
+        }
+        .section-tag {
+            font-size: 0.65rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 500;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .pov-body {
+            padding: 5rem 5rem 5rem 5rem;
+        }
+        .pov-headline {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.75rem, 4vw, 4.5rem);
+            line-height: 1;
+            margin-bottom: 2.75rem;
+            max-width: 20ch;
+        }
+        .pov-text p {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.85;
+            color: #3D3A36;
+            margin-bottom: 1.5rem;
+            max-width: 62ch;
+        }
+        .pov-text p:last-child { margin-bottom: 0; }
+        .pov-text strong {
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        /* ─── WORK ───────────────────────────────── */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 2.75rem 3.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            line-height: 1;
+        }
+        .section-meta {
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .case-study {
+            display: grid;
+            grid-template-columns: 6rem 1fr 3rem;
+            align-items: start;
+            gap: 0;
+            padding: 3rem 3.5rem;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+            cursor: default;
+        }
+        .case-study:hover { background: rgba(10,10,10,0.025); }
+        .case-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.75rem;
+            color: var(--subtle);
+            line-height: 1;
+            padding-top: 0.1rem;
+        }
+        .case-tag {
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+        }
+        .case-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+            line-height: 1.05;
+            margin-bottom: 1rem;
+        }
+        .case-desc {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: #5A5652;
+            max-width: 60ch;
+            line-height: 1.75;
+        }
+        .case-insight {
+            margin-top: 1.25rem;
+            padding: 1rem 1.25rem;
+            border-left: 2px solid var(--green);
+            background: rgba(10,10,10,0.04);
+        }
+        .case-insight p {
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--green);
+            font-style: italic;
+            line-height: 1.65;
+        }
+        .case-arrow {
+            font-size: 1.2rem;
+            color: var(--subtle);
+            align-self: flex-start;
+            padding-top: 0.6rem;
+            transition: transform 0.2s, color 0.2s;
+        }
+        .case-study:hover .case-arrow {
+            transform: translateX(4px);
+            color: var(--black);
+        }
+
+        /* ─── SERVICES ───────────────────────────── */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid var(--border);
+        }
+        .service {
+            padding: 3.5rem;
+            border-right: 1px solid var(--border);
+        }
+        .service:last-child { border-right: none; }
+        .service-icon {
+            font-size: 1.25rem;
+            margin-bottom: 1.75rem;
+            color: var(--green);
+        }
+        .service-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.85rem;
+            line-height: 1.05;
+            margin-bottom: 1rem;
+        }
+        .service-desc {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #5A5652;
+            line-height: 1.75;
+        }
+        .service-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        .service-list li {
+            font-size: 0.78rem;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .service-list li::before {
+            content: '—';
+            color: var(--subtle);
+        }
+
+        /* ─── THINKING ───────────────────────────── */
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 1px solid var(--border);
+        }
+        .article {
+            padding: 3rem 3.5rem;
+            border-right: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .article:last-child { border-right: none; }
+        .article:hover { background: rgba(10,10,10,0.025); }
+
+        /* Sport image block */
+        .article-img {
+            height: 180px;
+            margin: -3rem -3.5rem 2.25rem;
+            position: relative;
+            overflow: hidden;
+            background: var(--black);
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem 1.5rem;
+        }
+        .article-img-word {
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.5rem;
+            line-height: 1;
+            color: rgba(240,237,228,0.06);
+            top: 50%;
+            left: 1.5rem;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+        }
+        .article-img-tag {
+            position: relative;
+            font-size: 0.58rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(240,237,228,0.40);
+            font-weight: 600;
+        }
+        .article-img-line {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: rgba(240,237,228,0.08);
+        }
+
+        .article-badge {
+            display: inline-block;
+            font-size: 0.62rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--green);
+            background: rgba(10,10,10,0.08);
+            padding: 0.25rem 0.6rem;
+            margin-bottom: 1.25rem;
         }
         .article-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-            line-height: 0.95;
-            letter-spacing: 0.02em;
-            margin-bottom: 3rem;
-        }
-        .article-body p {
-            font-size: 1.05rem;
-            line-height: 1.85;
-            color: #3A3835;
-            margin-bottom: 1.5rem;
-        }
-        .article-body p strong {
-            font-weight: 600;
-            color: var(--black);
-        }
-        .article-body p em {
-            font-style: italic;
-            color: var(--muted);
-        }
-        .article-body h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.6rem;
-            letter-spacing: 0.03em;
-            margin: 3rem 0 1.25rem;
-            color: var(--black);
-        }
-        .article-insight {
-            border-left: 2px solid var(--black);
-            background: rgba(10,10,10,0.04);
-            padding: 1.5rem 2rem;
-            margin: 2.5rem 0;
-        }
-        .article-insight p {
-            font-size: 1rem !important;
-            font-weight: 400 !important;
-            color: var(--black) !important;
-            font-style: italic;
-            line-height: 1.7 !important;
-            margin: 0 !important;
-        }
-        .article-divider {
-            border: none;
-            border-top: 1px solid var(--border);
-            margin: 3.5rem 0;
-        }
-
-        /* ─── CTA ─── */
-        .article-cta {
-            background: var(--green);
-            color: var(--cream);
-            padding: 5rem 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .cta-text {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2rem, 3.5vw, 3rem);
-            line-height: 1;
+            font-size: 1.65rem;
+            line-height: 1.1;
             margin-bottom: 1rem;
         }
-        .cta-sub {
-            font-size: 0.9rem;
-            color: rgba(240,237,228,0.5);
+        .article-excerpt {
+            font-size: 0.85rem;
             font-weight: 300;
+            color: #5A5652;
             line-height: 1.7;
+            margin-bottom: 1.75rem;
         }
-        .cta-action { display: flex; flex-direction: column; gap: 1rem; }
+        .article-link {
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 500;
+            padding-bottom: 0.1rem;
+            border-bottom: 1px solid currentColor;
+            transition: opacity 0.2s;
+        }
+        .article-link:hover { opacity: 0.4; }
+
+        /* ─── CONTACT ────────────────────────────── */
+        .contact {
+            background: var(--green);
+            color: var(--cream);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .contact-left {
+            padding: 5.5rem 3.5rem;
+            border-right: 1px solid rgba(240,237,228,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .contact-tagline {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 5.5vw, 6rem);
+            line-height: 0.92;
+            margin-bottom: 2rem;
+        }
+        .contact-sub {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: rgba(240,237,228,0.55);
+            max-width: 40ch;
+            line-height: 1.75;
+        }
+        .contact-footer-note {
+            font-size: 0.65rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(240,237,228,0.25);
+            margin-top: 4rem;
+        }
+        .contact-right {
+            padding: 5.5rem 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(240,237,228,0.4);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .contact-links {
+            margin-bottom: 3.5rem;
+        }
+        .contact-links a {
+            display: block;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: var(--cream);
+            text-decoration: none;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.03em;
+            transition: opacity 0.2s;
+        }
+        .contact-links a:hover { opacity: 0.5; }
         .btn-light {
             display: inline-flex;
             align-items: center;
-            justify-content: space-between;
             gap: 0.65rem;
             background: var(--cream);
             color: var(--green);
@@ -233,11 +604,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             text-transform: uppercase;
             text-decoration: none;
             font-weight: 600;
+            width: fit-content;
             transition: opacity 0.2s;
         }
         .btn-light:hover { opacity: 0.85; }
 
-        /* ─── FOOTER ─── */
+        /* ─── FOOTER BAR ─────────────────────────── */
         .footer-bar {
             background: var(--green);
             border-top: 1px solid rgba(240,237,228,0.08);
@@ -250,31 +622,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             letter-spacing: 0.1em;
         }
 
-        /* ─── AUTHOR / SHARE / COLLAB ─── */
-        .article-author { display:flex; align-items:center; gap:1rem; margin-bottom:3rem; padding-bottom:2rem; border-bottom:1px solid var(--border); }
-        .author-chip { width:34px; height:34px; background:var(--black); color:var(--cream); font-family:'Bebas Neue',sans-serif; font-size:0.8rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-        .author-details { display:flex; flex-direction:column; gap:0.15rem; }
-        .author-link { font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--black); text-decoration:none; }
-        .author-link:hover { opacity:0.5; }
-        .author-tagline { font-size:0.65rem; color:var(--muted); letter-spacing:0.06em; }
-        .article-share { display:flex; align-items:center; gap:0.65rem; flex-wrap:wrap; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border); }
-        .share-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-right:0.25rem; }
-        .share-btn { font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; color:var(--black); text-decoration:none; padding:0.45rem 0.85rem; border:1px solid rgba(10,10,10,0.18); transition:background 0.15s,color 0.15s; white-space:nowrap; cursor:pointer; background:transparent; font-family:inherit; }
-        .share-btn:hover { background:var(--black); color:var(--cream); }
-        .article-collab { margin-top:2rem; padding-top:1.75rem; border-top:1px solid var(--border); display:none; }
-        .article-collab:has(.collab-person) { display:block; }
-        .collab-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); font-weight:600; display:block; margin-bottom:0.65rem; }
-        .collab-list { display:flex; flex-wrap:wrap; gap:0.5rem; }
-        .collab-person { font-size:0.7rem; letter-spacing:0.08em; font-weight:500; color:var(--black); text-decoration:none; padding:0.3rem 0.7rem; border:1px solid rgba(10,10,10,0.18); transition:background 0.15s,color 0.15s; }
-        .collab-person:hover { background:var(--black); color:var(--cream); }
-
-        /* ─── RESPONSIVE ─── */
+        /* ─── RESPONSIVE ─────────────────────────── */
         @media (max-width: 900px) {
-            nav { padding: 1.25rem 1.5rem; }
-            .photo-overlay { padding: 2rem 1.5rem; }
-            .article-wrap { padding: 3rem 1.5rem 3rem; }
-            .article-cta { grid-template-columns: 1fr; padding: 3.5rem 1.5rem; gap: 2rem; }
-            .footer-bar { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+            nav {
+                padding: 1.25rem 1.5rem;
+                background: var(--cream);
+                border-bottom-color: var(--border);
+            }
+            .nav-links { gap: 1.5rem; }
+
+            .hero { grid-template-columns: 1fr; }
+            .hero-photo { height: 55vw; min-height: 300px; order: -1; }
+            .hero-photo-placeholder { min-height: 300px; }
+            .hero-text {
+                padding: 2.5rem 1.5rem 2.5rem;
+                border-right: none;
+                border-top: 1px solid var(--border);
+            }
+
+            .stats-bar { grid-template-columns: 1fr 1fr; }
+            .stat:nth-child(3) { border-right: none; }
+            .stat:nth-child(4) { grid-column: span 2; border-top: 1px solid var(--border); border-right: none; }
+
+            .pov { grid-template-columns: 1fr; }
+            .pov-sidebar { display: none; }
+            .pov-body { padding: 3rem 1.5rem; }
+
+            .section-header { padding: 2rem 1.5rem; }
+
+            .case-study { padding: 2rem 1.5rem; grid-template-columns: 4.5rem 1fr; }
+            .case-arrow { display: none; }
+
+            .services { grid-template-columns: 1fr; }
+            .service { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
+            .service:last-child { border-bottom: none; }
+
+            .articles { grid-template-columns: 1fr; }
+            .article { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
+            .article:last-child { border-bottom: none; }
+            .article-img { margin: -2.5rem -1.5rem 2rem; height: 150px; }
+
+            .contact { grid-template-columns: 1fr; }
+            .contact-left { padding: 3.5rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(240,237,228,0.1); }
+            .contact-right { padding: 3.5rem 1.5rem; }
+
+            .footer-bar { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links { display: none; }
+            h1 { font-size: clamp(4rem, 18vw, 7rem); }
+            .hero-subtitle { font-size: 1.15rem; }
+            .stats-bar { grid-template-columns: 1fr 1fr; }
+            .stat { padding: 1.5rem; }
+            .stat:nth-child(3) { border-right: 1px solid var(--border); }
+            .stat:nth-child(4) { grid-column: 1; border-top: none; }
         }
     </style>
 </head>
@@ -283,95 +685,238 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
-    <a href="/" class="nav-logo">Dani Olmedo</a>
-    <a href="/#work" class="nav-back">← Volver al trabajo</a>
+<!-- ═══ NAV ════════════════════════════════════════════════ -->
+<nav id="nav">
+    <a href="#" class="nav-logo">DANI OLMEDO</a>
+    <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#thinking">Thinking</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
 </nav>
 
-<!-- PHOTO HEADER -->
-<div class="article-photo">
-    <div class="photo-placeholder">
-        <span class="photo-bg-word">CORNERSHOP</span>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<section class="hero">
+    <div class="hero-text">
+        <span class="hero-eyebrow">Santiago, Chile · Advisor</span>
+        <h1>GROWTH.<br>DISEÑO.<br>PRODUCTO.</h1>
+        <p class="hero-subtitle">Los tres, con la misma lógica.</p>
+        <p class="hero-sub">Para founders que saben adónde quieren ir y necesitan a alguien que entienda cómo conectar el crecimiento, la experiencia y la marca.</p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn-primary">Hablemos →</a>
+            <a href="#work" class="btn-ghost">Ver trabajo</a>
+        </div>
     </div>
-    <div class="photo-overlay">
-        <div class="article-case-num">CASO 01</div>
-        <div class="article-header-tag">Growth · Creatividad estratégica · Cornershop by Uber</div>
+    <div class="hero-photo">
+        <img src="foto-hero.jpg" alt="Dani Olmedo">
+    </div>
+</section>
+
+
+<!-- ═══ STATS ═══════════════════════════════════════════════ -->
+<div class="stats-bar">
+    <div class="stat">
+        <div class="stat-num">14+</div>
+        <div class="stat-label">Años en marketing & producto</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Países gestionados en simultáneo</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Capas: growth, diseño, producto</div>
+    </div>
+    <div class="stat">
+        <div class="stat-num">Ex</div>
+        <div class="stat-label">Groupon LatAm · Cornershop · Uber</div>
     </div>
 </div>
 
-<!-- ARTICLE BODY -->
-<div class="article-wrap">
-    <h1 class="article-title">CONECTAR UN VALOR REAL CON EL USUARIO CORRECTO</h1>
 
-    <div class="article-author">
-        <div class="author-chip">DO</div>
-        <div class="author-details">
-            <a href="https://www.linkedin.com/in/danielolmedofuentes/" target="_blank" rel="noopener" class="author-link">Dani Olmedo</a>
-            <span class="author-tagline">Growth · Diseño · Producto</span>
+<!-- ═══ POV ════════════════════════════════════════════════ -->
+<section class="pov">
+    <div class="pov-sidebar">
+        <span class="section-tag">Manifiesto</span>
+    </div>
+    <div class="pov-body">
+        <h2 class="pov-headline">EL PROBLEMA NO ES EL MARKETING.</h2>
+        <div class="pov-text">
+            <p>La mayoría de las startups contrata a alguien para hacer crecer los números, a otro para hacer la marca bonita, y a uno más para pensar el producto. Y después se preguntan por qué no se conectan.</p>
+            <p>Llevo 14 años trabajando en esa intersección — gestionando campañas de performance en 7 mercados al mismo tiempo en Groupon, iterando mensajes de adquisición junto al equipo de diseño en Cornershop cuando la marca todavía no era conocida, y aprendiendo en cada caso cómo el canal, el mensaje y la marca se afectan entre sí.</p>
+            <p>Soy alguien que entiende cómo el <strong>crecimiento, el diseño y el producto se afectan mutuamente</strong> — y puedo acompañar al equipo que los tiene separados, o al founder que los está pensando solo.</p>
         </div>
     </div>
+</section>
 
-    <div class="article-body">
-        <p>Cuando llegué a Cornershop, el producto ya tenía tracción — pero de nicho. Lo usaba gente que lo había descubierto, que entendía el modelo, y que lo valoraba. El desafío era crecer más allá de ese primer círculo: comunicarle el valor a alguien que nunca había pensado en hacer sus compras de otra forma.</p>
 
-        <p>El producto era genuinamente bueno — y no solo en lo funcional. Cornershop tenía una obsesión por el diseño que se notaba: una app nativa, limpia, que se sentía igual de bien en iOS que en Android en una época donde eso no era la norma. Esa atención al detalle generó algo que pocas plataformas logran en sus primeras etapas: usuarios que no solo lo usaban, sino que lo recomendaban con orgullo. El brand love vino en parte de ahí — del trabajo silencioso del equipo de product design.</p>
+<!-- ═══ WORK ═══════════════════════════════════════════════ -->
+<section id="work">
+    <div class="section-header">
+        <h2 class="section-title">TRABAJO SELECTO</h2>
+        <span class="section-meta">Proyectos & casos</span>
+    </div>
 
-        <p>El problema era que ese mensaje, en abstracto, no activaba nada en alguien que no lo había vivido. La gente no cambia hábitos por una descripción — cambia cuando algo encaja con algo que ya tiene valor para ellos.</p>
-
-        <h2>El giro: usar lo que ya le importaba al usuario</h2>
-
-        <p>En equipo con diseño, empezamos a iterar sobre una hipótesis simple: en vez de hablar de Cornershop, hablar de las tiendas que los usuarios ya conocían y ya confiaban.</p>
-
-        <p><em>"Desde Jumbo a tu casa en 1 hora."</em></p>
-
-        <p>Eso era Cornershop explicado sin mencionar a Cornershop. El usuario no tenía que entender un modelo nuevo — solo tenía que conectar la tienda donde ya compraba con la posibilidad de recibirla en casa, rápido. Cero fricción conceptual.</p>
-
-        <p>No fue un hallazgo de un día. Fue el resultado de docenas de iteraciones, revisiones semanales entre marketing y diseño, y la disposición de ambos equipos de priorizar el aprendizaje por encima de la creatividad por sí sola.</p>
-
-        <h2>Por qué esto importa más allá de Cornershop</h2>
-
-        <p>La mayoría de los equipos de marketing habla de sus propios beneficios: <strong>"Somos rápidos. Somos confiables. Somos fáciles de usar."</strong> Eso es hablar desde tu perspectiva, no desde la del usuario.</p>
-
-        <p>El movimiento que hicimos fue el contrario: partir desde el universo del usuario — sus tiendas, sus hábitos, sus referencias — y mostrar cómo Cornershop encajaba ahí sin que nadie tuviera que entender un modelo nuevo.</p>
-
-        <p>La pregunta no es <em>¿cómo presentamos nuestro producto?</em> Es <em>¿qué ya tiene valor para este usuario, y cómo lo conectamos con lo que ofrecemos?</em></p>
-
-        <div class="article-insight">
-            <p>La clave no estuvo en el presupuesto ni en el formato. Estuvo en entender qué ya tenía valor para el usuario y conectarlo con lo que nosotros le ofrecíamos. Cuando ese match ocurre, el anuncio deja de sentirse como publicidad y empieza a sentirse como una solución obvia.</p>
-        </div>
-
-        <div class="article-share">
-            <span class="share-label">Compartir</span>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdaniolmedo.com%2Ftrabajo%2Fcornershop-mensajes-adquisicion%2F" target="_blank" rel="noopener" class="share-btn">LinkedIn</a>
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdaniolmedo.com%2Ftrabajo%2Fcornershop-mensajes-adquisicion%2F&text=Conectar+un+valor+real+con+el+usuario+correcto" target="_blank" rel="noopener" class="share-btn">X / Twitter</a>
-            <a href="https://wa.me/?text=Conectar+un+valor+real+con+el+usuario+correcto+%E2%86%92+https%3A%2F%2Fdaniolmedo.com%2Ftrabajo%2Fcornershop-mensajes-adquisicion%2F" target="_blank" rel="noopener" class="share-btn">WhatsApp</a>
-            <button class="share-btn" onclick="navigator.clipboard.writeText('https://daniolmedo.com/trabajo/cornershop-mensajes-adquisicion/').then(()=>{this.textContent='¡Copiado!';setTimeout(()=>this.textContent='Copiar link',1500)})">Copiar link</button>
-        </div>
-
-        <div class="article-collab">
-            <span class="collab-label">En este proyecto</span>
-            <div class="collab-list">
-                <!-- Para agregar colaboradores: <a href="https://linkedin.com/in/..." target="_blank" rel="noopener" class="collab-person">Nombre Apellido</a> -->
+    <a href="/trabajo/cornershop-mensajes-adquisicion/" style="text-decoration:none;color:inherit;display:contents;">
+    <div class="case-study">
+        <div class="case-num">01</div>
+        <div class="case-content">
+            <div class="case-tag">Growth · Creatividad estratégica · Cornershop by Uber</div>
+            <div class="case-title">CONECTAR UN VALOR REAL CON EL USUARIO CORRECTO</div>
+            <p class="case-desc">Uno de los valores más importantes de Cornershop era simple y poderoso: hacemos las compras como tú las harías, pero más rápido y sin que salgas de casa. El desafío era comunicarlo cuando nadie nos conocía aún. En equipo con diseño, trabajamos en iterar mensajes de adquisición que conectaran con ese valor de forma natural — y una de las líneas que mejor funcionó fue apalancarse del reconocimiento de las tiendas que los usuarios ya amaban: <em>"Desde Jumbo a tu casa en 1 hora"</em> — y claro, Lider también, entre otros.</p>
+            <p class="case-desc" style="margin-top:0.85rem;">Eso aplicaba tanto a groceries como a otras categorías. No fue un hallazgo de un día — fue el resultado de un proceso constante de prueba y aprendizaje compartido entre marketing y diseño, donde probar el mensaje correcto era tan importante como el canal donde lo poníamos.</p>
+            <div class="case-insight">
+                <p>La clave no estuvo en el presupuesto ni en el formato. Estuvo en entender qué ya tenía valor para el usuario y conectarlo con lo que nosotros le ofrecíamos.</p>
             </div>
         </div>
+        <span class="case-arrow">→</span>
     </div>
-</div>
+    </a>
 
-<!-- CTA -->
-<div class="article-cta">
-    <div>
-        <div class="cta-text">¿TU PRODUCTO ES BUENO PERO NADIE LO TERMINA DE ENTENDER?</div>
-        <p class="cta-sub">Probablemente el problema no está en el producto. Está en cómo lo estás contando. Es una conversación que vale la pena tener.</p>
+    <a href="/trabajo/cornershop-shoppers-pandemia/" style="text-decoration:none;color:inherit;display:contents;">
+    <div class="case-study">
+        <div class="case-num">02</div>
+        <div class="case-content">
+            <div class="case-tag">Growth · Producto · Funnel · Cornershop by Uber</div>
+            <div class="case-title">CALIDAD SOBRE CANTIDAD: EL FUNNEL DE SHOPPERS EN PANDEMIA</div>
+            <p class="case-desc">Durante la pandemia, la demanda de plataformas de compras esenciales creció de forma exponencial — y con ella, la urgencia de escalar rápido la red de shoppers. Construimos un modelo de trabajo junto al equipo dueño del onboarding: revisiones semanales del funnel para detectar dónde caían los candidatos y corregir en tiempo real.</p>
+            <p class="case-desc" style="margin-top:0.85rem;">En uno de esos ciclos encontramos un problema claro: necesitábamos shoppers con auto, pero había una caída importante justo en el paso donde se pedía información del vehículo. Estaban llegando postulantes sin auto, lo que subía el costo por lead y bajaba la tasa de activación. La respuesta fue rápida y colaborativa — con diseño desarrollamos nuevas creatividades enfocadas exclusivamente en ese perfil: <em>"¿Tienes auto y tiempo libre para generar ingresos?"</em>, <em>"¿Buscas empleo y tienes auto? Postula hoy."</em></p>
+            <div class="case-insight">
+                <p>El CPL tuvo un incremento entre un 20-30%, pero el costo de activación de un shopper bajó con la mejora en calidad de los leads. Cuando marketing y el equipo dueño del proceso comparten la misma información, las soluciones son más rápidas — y más precisas.</p>
+            </div>
+        </div>
+        <span class="case-arrow">→</span>
     </div>
-    <div class="cta-action">
-        <a href="mailto:danielolmedo.fuentes@gmail.com?subject=Hola Dani, quiero hablar de mensaje y posicionamiento" class="btn-light">
-            <span>Escríbeme un correo</span><span>✉</span>
-        </a>
-        <a href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener" class="btn-light" style="background:transparent;color:var(--cream);border:1px solid rgba(240,237,228,0.3);">
-            <span>Agendemos 30 minutos</span><span>📅</span>
-        </a>
+    </a>
+
+    <a href="/trabajo/groupon-performance-regional/" style="text-decoration:none;color:inherit;display:contents;">
+    <div class="case-study">
+        <div class="case-num">03</div>
+        <div class="case-content">
+            <div class="case-tag">Performance Marketing · Escala regional · Groupon LatAm</div>
+            <div class="case-title">PERFORMANCE EN 7 MERCADOS — CON PRESUPUESTO CONDICIONADO SOLO POR EL ROI</div>
+            <p class="case-desc">Chile, Colombia, México, Uruguay, Puerto Rico, Perú y Panamá en simultáneo. Presupuestos de escala regional que en algunos meses no tenían techo — la única condición era el ROI que demostrábamos. Eso implicaba un nivel de control y optimización muy distinto al de un solo mercado.</p>
+            <p class="case-desc" style="margin-top:0.85rem;">La operación era compleja de verdad: el flujo cubría desde el anuncio hasta la landing page relevante para ese usuario, con trackeo exhaustivo en cada paso. Categorías enormes, comportamientos distintos por país, y una plataforma desarrollada por el equipo de tecnología en Chile que nos permitía saber exactamente desde qué anuncio llegó cada usuario, en qué versión de landing cayó, y si terminó comprando. Algo que en ese momento —2013— era inusual incluso en la región.</p>
+            <div class="case-insight">
+                <p>Crear un set de anuncios SEM tomaba casi una semana completa. Hoy, con IA, lo que antes era una SEMana es cuestión de minutos — y eso cambia radicalmente dónde debería estar el foco real de un equipo de marketing.</p>
+            </div>
+        </div>
+        <span class="case-arrow">→</span>
     </div>
-</div>
+    </a>
+</section>
+
+
+<!-- ═══ SERVICES ════════════════════════════════════════════ -->
+<section class="services">
+    <div class="service">
+        <div class="service-icon">↗</div>
+        <div class="service-title">GROWTH & ADQUISICIÓN</div>
+        <p class="service-desc">Estrategia de marketing digital para startups: Meta Ads, Google Ads, funnels de adquisición y optimización de conversión. No solo tráfico — los usuarios correctos, en el canal correcto.</p>
+        <ul class="service-list">
+            <li>Estrategia de adquisición multicanal</li>
+            <li>Meta Ads · Google Ads · Performance</li>
+            <li>Arquitectura de funnels</li>
+            <li>CRM & activación</li>
+        </ul>
+    </div>
+    <div class="service">
+        <div class="service-icon">◈</div>
+        <div class="service-title">DISEÑO DE PRODUCTO</div>
+        <p class="service-desc">UX/UI, flujos de usuario y diseño de producto digital orientado a la conversión. El buen diseño no es decoración — mueve las métricas que importan.</p>
+        <ul class="service-list">
+            <li>UX research & user flows</li>
+            <li>Diseño de producto digital</li>
+            <li>Reducción de fricción en onboarding</li>
+            <li>Prototipado & testeo</li>
+        </ul>
+    </div>
+    <div class="service">
+        <div class="service-icon">◎</div>
+        <div class="service-title">ESTRATEGIA DE MARCA</div>
+        <p class="service-desc">Posicionamiento, narrativa y propuesta de valor para startups que necesitan saber qué son antes de crecer. Sin marca clara, el crecimiento solo amplifica la confusión.</p>
+        <ul class="service-list">
+            <li>Posicionamiento & propuesta de valor</li>
+            <li>Narrativa de marca</li>
+            <li>Identidad visual estratégica</li>
+            <li>Desarrollo de sub-marcas</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ═══ THINKING ════════════════════════════════════════════ -->
+<section id="thinking">
+    <div class="section-header">
+        <h2 class="section-title">THINKING</h2>
+        <span class="section-meta">Opiniones sin filtro</span>
+    </div>
+    <div class="articles">
+        <div class="article">
+            <div class="article-img">
+                <span class="article-img-word">WEIGHTLIFTING</span>
+                <span class="article-img-tag">#WEIGHTLIFTING</span>
+                <div class="article-img-line"></div>
+            </div>
+            <span class="article-badge">Thinking</span>
+            <div class="article-title">POR QUÉ SEPARAR GROWTH DE DISEÑO ES EL ERROR MÁS COSTOSO DE UNA STARTUP</div>
+            <p class="article-excerpt">Tienes un equipo de performance corriendo ads y un diseñador haciendo la marca. ¿Cuándo fue la última vez que los pusiste en la misma sala a hablar de la misma métrica?</p>
+            <a href="/thinking/growth-diseno-error-startup/" class="article-link">Leer →</a>
+        </div>
+        <div class="article">
+            <div class="article-img">
+                <span class="article-img-word">RELAY RACE</span>
+                <span class="article-img-tag">#RELAY RACE</span>
+                <div class="article-img-line"></div>
+            </div>
+            <span class="article-badge">Thinking</span>
+            <div class="article-title">LO QUE APRENDÍ CORRIENDO PERFORMANCE EN 7 PAÍSES AL MISMO TIEMPO</div>
+            <p class="article-excerpt">Cada mercado tiene su propia lógica. El error más común es asumir que lo que escaló en Chile va a escalar en México. Spoiler: casi nunca.</p>
+            <a href="/thinking/performance-7-paises/" class="article-link">Leer →</a>
+        </div>
+        <div class="article">
+            <div class="article-img">
+                <span class="article-img-word">MARATHON</span>
+                <span class="article-img-tag">#MARATHON</span>
+                <div class="article-img-line"></div>
+            </div>
+            <span class="article-badge">Thinking</span>
+            <div class="article-title">EL FOUNDER QUE NO ENTIENDE SU FUNNEL DE PRODUCTO NUNCA VA A ESCALAR</div>
+            <p class="article-excerpt">El problema no es la adquisición. Es lo que pasa después del clic — y la mayoría no lo mira hasta que el CAC se va a las nubes.</p>
+            <a href="/thinking/funnel-producto-founder/" class="article-link">Leer →</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══ CONTACT ═════════════════════════════════════════════ -->
+<section id="contact" class="contact">
+    <div class="contact-left">
+        <div>
+            <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(240,237,228,0.4); margin-bottom:1.75rem; font-weight:500;">Trabajemos juntos</p>
+            <div class="contact-tagline">¿TIENES UN<br>PROYECTO<br>EN MENTE?</div>
+            <p class="contact-sub">Si estás construyendo algo y necesitas que el crecimiento, el diseño y el producto hablen el mismo idioma — hablemos.</p>
+        </div>
+        <p class="contact-footer-note">Santiago, Chile · Disponible para proyectos remotos</p>
+    </div>
+    <div class="contact-right">
+        <p class="contact-label">¿Por dónde empezamos?</p>
+        <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:3rem;">
+            <a href="mailto:danielolmedo.fuentes@gmail.com?subject=Hola Dani, tengo un proyecto" class="btn-light" style="justify-content:space-between;">
+                <span>Escríbeme un correo</span>
+                <span>✉</span>
+            </a>
+            <!-- Reemplaza la URL con tu link de Google Calendar Appointment Schedule:
+                 Calendar → Appointment schedules → Crear → copiar el booking link -->
+            <a href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener" class="btn-light" style="background:transparent; color:var(--cream); border:1px solid rgba(240,237,228,0.3); justify-content:space-between;">
+                <span>Agendemos una llamada</span>
+                <span>📅</span>
+            </a>
+        </div>
+        <a href="https://www.linkedin.com/in/danielolmedofuentes/" target="_blank" rel="noopener" style="font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(240,237,228,0.4); text-decoration:none; font-weight:500; border-bottom:1px solid rgba(240,237,228,0.2); padding-bottom:0.1rem;">LinkedIn ↗</a>
+    </div>
+</section>
 
 <div class="footer-bar">
     <span>© 2026 Dani Olmedo</span>
@@ -379,8 +924,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>Santiago, Chile</span>
 </div>
 
+
+<!-- ═══ SCRIPTS ══════════════════════════════════════════════ -->
 <script>
-    // Nav already has background — no scroll needed for article pages
+    // Nav scroll shadow
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
 </script>
+
 </body>
 </html>
