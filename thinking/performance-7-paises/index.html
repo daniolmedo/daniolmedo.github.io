@@ -10,8 +10,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://daniolmedo.com/thinking/performance-7-paises/">
     <title>Lo que aprendí corriendo performance en 7 países al mismo tiempo — Dani Olmedo</title>
     <meta name="description" content="El mito del anuncio ganador universal y lo que realmente cambia cuando operas performance en varios mercados simultáneos.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Lo que aprendí corriendo performance en 7 países al mismo tiempo",
+      "description": "El mito del anuncio ganador universal y lo que realmente cambia cuando operas performance en varios mercados simultáneos.",
+      "url": "https://daniolmedo.com/thinking/performance-7-paises/",
+      "datePublished": "2026-01-01",
+      "author": {
+        "@type": "Person",
+        "name": "Dani Olmedo",
+        "url": "https://daniolmedo.com",
+        "sameAs": "https://www.linkedin.com/in/danielolmedofuentes/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Dani Olmedo",
+        "url": "https://daniolmedo.com"
+      },
+      "inLanguage": "es"
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -50,11 +73,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .author-chip{width:34px;height:34px;background:var(--black);color:var(--cream);font-family:'Bebas Neue',sans-serif;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
         .author-details{display:flex;flex-direction:column;gap:0.15rem;}
         .author-link{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--black);text-decoration:none;}.author-link:hover{opacity:0.5;}
-        .author-tagline{font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;}
+        .author-tagline{font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;}.author-bio{font-size:0.7rem;color:var(--muted);line-height:1.5;margin-top:0.1rem;}
         .article-share{display:flex;align-items:center;gap:0.65rem;flex-wrap:wrap;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
         .share-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-right:0.25rem;}
         .share-btn{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--black);text-decoration:none;padding:0.45rem 0.85rem;border:1px solid rgba(10,10,10,0.18);transition:background 0.15s,color 0.15s;white-space:nowrap;cursor:pointer;background:transparent;font-family:inherit;}
         .share-btn:hover{background:var(--black);color:var(--cream);}
+        .like-btn{margin-left:auto;display:inline-flex;align-items:center;gap:0.45rem;cursor:pointer;background:transparent;border:1px solid rgba(10,10,10,0.18);padding:0.45rem 0.85rem;font-family:inherit;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--muted);transition:background 0.15s,color 0.15s;white-space:nowrap;}
+        .like-btn:hover{background:var(--black);color:var(--cream);}
+        .like-btn.active{background:var(--black);color:var(--cream);}
+        .like-heart{width:13px;height:13px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+        .like-btn.active .like-heart{fill:currentColor;}
+        @keyframes like-pop{0%{transform:scale(1)}40%{transform:scale(1.35)}100%{transform:scale(1)}}
+        .like-btn.pop .like-heart{animation:like-pop 0.3s ease;}
         .article-collab{margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--border);display:none;}
         .article-collab:has(.collab-person){display:block;}
         .collab-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:0.65rem;}
@@ -93,6 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="author-details">
             <a href="https://www.linkedin.com/in/danielolmedofuentes/" target="_blank" rel="noopener" class="author-link">Dani Olmedo</a>
             <span class="author-tagline">Growth · Diseño · Producto</span>
+            <span class="author-bio">14 años en growth, performance y diseño de producto. Ex Cornershop by Uber · Ex Groupon LatAm.</span>
         </div>
     </div>
 
@@ -109,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <h2>El factor marca</h2>
 
-        <p>Groupon tenía una ventaja real; era una marca global con un alto brand awareness y una frecuencia de compra alta. Eso ayudaba al entrar a un mercado nuevo, había un piso de credibilidad que abría la puerta.</p>
+        <p>Groupon tenía una ventaja real: era una marca global con reconocimiento. Eso ayudaba al entrar a un mercado nuevo: había un piso de credibilidad que abría la puerta.</p>
 
         <p>Para una marca nueva, la historia es completamente distinta. No tienes ese piso. El usuario no sabe quién eres, no tiene razón para confiar en ti, y tu anuncio ganador del mercado 1 no significa nada en el mercado 2.</p>
 
@@ -119,7 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <p><strong>Primero: humildad.</strong> Llegar con el anuncio ganador de tu mercado original asumiendo que va a funcionar igual es el error más común y más caro.</p>
 
-        <p><strong>Segundo: vuelve al principio.</strong> En un mercado nuevo nadie te conoce. Tu trabajo inicial no es escalar, es explicar quién eres y qué valor ofreces. Performance en ese contexto no es branding, es búsqueda de tracción. Y buscar tracción requiere probar, equivocarse, y corregir rápido.</p>
+        <p><strong>Segundo: vuelve al principio.</strong> En un mercado nuevo nadie te conoce. Tu trabajo inicial no es escalar: es explicar quién eres y qué valor ofreces. Performance en ese contexto no es branding, es búsqueda de tracción. Y buscar tracción requiere probar, equivocarse, y corregir rápido.</p>
 
         <p><strong>Tercero: acepta que vas a dar dos pasos atrás antes de avanzar.</strong> No porque estés haciendo algo mal, sino porque cada mercado tiene su propia lógica y el único modo de aprenderla es enfrentándola con datos y sin demasiadas asunciones previas.</p>
 
@@ -133,6 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdaniolmedo.com%2Fthinking%2Fperformance-7-paises%2F&text=Lo+que+aprend%C3%AD+corriendo+performance+en+7+pa%C3%ADses+al+mismo+tiempo" target="_blank" rel="noopener" class="share-btn">X / Twitter</a>
             <a href="https://wa.me/?text=Lo+que+aprend%C3%AD+corriendo+performance+en+7+pa%C3%ADses+%E2%86%92+https%3A%2F%2Fdaniolmedo.com%2Fthinking%2Fperformance-7-paises%2F" target="_blank" rel="noopener" class="share-btn">WhatsApp</a>
             <button class="share-btn" onclick="navigator.clipboard.writeText('https://daniolmedo.com/thinking/performance-7-paises/').then(()=>{this.textContent='¡Copiado!';setTimeout(()=>this.textContent='Copiar link',1500)})">Copiar link</button>
+            <button class="like-btn" data-article="performance-7-paises" onclick="toggleLike(this)"><svg class="like-heart" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="like-count" data-seed="31">31</span></button>
         </div>
 
         <div class="article-collab">
@@ -165,5 +197,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>Santiago, Chile</span>
 </div>
 
+<script>
+function toggleLike(btn){var id=btn.dataset.article,key='liked_'+id,isLiked=localStorage.getItem(key)==='1',c=btn.querySelector('.like-count'),seed=parseInt(c.dataset.seed)||0;btn.classList.remove('pop');void btn.offsetWidth;if(isLiked){localStorage.removeItem(key);btn.classList.remove('active');c.textContent=seed;}else{localStorage.setItem(key,'1');btn.classList.add('active','pop');c.textContent=seed+1;}}
+document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.like-btn[data-article]').forEach(function(btn){var id=btn.dataset.article;if(localStorage.getItem('liked_'+id)==='1'){btn.classList.add('active');var c=btn.querySelector('.like-count');if(c)c.textContent=(parseInt(c.dataset.seed)||0)+1;}});});
+</script>
 </body>
 </html>
