@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KMXX28QG');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://daniolmedo.com/thinking/">
+    <title>Thinking — Dani Olmedo</title>
+    <meta name="description" content="Opiniones sin filtro sobre growth, performance, diseño de producto y cómo se conectan. Por Dani Olmedo.">
+    <meta property="og:title" content="Thinking — Dani Olmedo">
+    <meta property="og:description" content="Opiniones sin filtro sobre growth, performance, diseño de producto y cómo se conectan.">
+    <meta property="og:url" content="https://daniolmedo.com/thinking/">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><text x='50' y='66' font-family='Arial Black,sans-serif' font-size='38' font-weight='900' fill='%23F0EDE4' text-anchor='middle' letter-spacing='-1'>DO</text></svg>">
+    <style>
+        :root { --cream:#F0EDE4; --black:#0A0A0A; --green:#111111; --muted:#8A8680; --subtle:#DEDAD2; --border:rgba(10,10,10,0.10); }
+        *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+        html { scroll-behavior:smooth; }
+        body { background:var(--cream); color:var(--black); font-family:'Inter',sans-serif; font-weight:300; font-size:16px; line-height:1.6; overflow-x:hidden; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:space-between; align-items:center; padding:1.5rem 3rem; background:var(--cream); border-bottom:1px solid var(--border); }
+        .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.12em; text-decoration:none; color:var(--black); }
+        .nav-back { font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; color:var(--muted); font-weight:500; transition:opacity 0.2s; }
+        .nav-back:hover { opacity:0.5; }
+        .page-header { margin-top:65px; padding:4rem 3.5rem 3rem; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:flex-end; }
+        .page-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,6vw,5.5rem); line-height:1; }
+        .page-meta { font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); font-weight:500; }
+        .articles { display:grid; grid-template-columns:repeat(2,1fr); border-bottom:1px solid var(--border); }
+        .article { padding:3rem 3.5rem; border-right:1px solid var(--border); border-bottom:1px solid var(--border); transition:background 0.2s; text-decoration:none; color:inherit; display:block; }
+        .article:nth-child(2n) { border-right:none; }
+        .article:nth-last-child(-n+2) { border-bottom:none; }
+        .article:hover { background:rgba(10,10,10,0.025); }
+        .article-img { height:160px; margin:-3rem -3.5rem 2.25rem; position:relative; overflow:hidden; background:var(--black); display:flex; align-items:flex-end; padding:1rem 1.5rem; }
+        .article-img-word { position:absolute; font-family:'Bebas Neue',sans-serif; font-size:5.5rem; line-height:1; color:rgba(240,237,228,0.06); top:50%; left:1.5rem; transform:translateY(-50%); white-space:nowrap; letter-spacing:0.04em; }
+        .article-img-tag { position:relative; font-size:0.58rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(240,237,228,0.40); font-weight:600; }
+        .article-badge { display:inline-block; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--green); background:rgba(10,10,10,0.08); padding:0.25rem 0.6rem; margin-bottom:1.25rem; }
+        .article-title { font-family:'Bebas Neue',sans-serif; font-size:1.65rem; line-height:1.1; margin-bottom:1rem; }
+        .article-excerpt { font-size:0.85rem; font-weight:300; color:#5A5652; line-height:1.7; margin-bottom:1.75rem; }
+        .article-link { font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--black); text-decoration:none; font-weight:500; padding-bottom:0.1rem; border-bottom:1px solid currentColor; transition:opacity 0.2s; }
+        .article:hover .article-link { opacity:0.4; }
+        .footer-bar { background:var(--green); border-top:1px solid rgba(240,237,228,0.08); padding:1.5rem 3.5rem; display:flex; justify-content:space-between; align-items:center; color:rgba(240,237,228,0.3); font-size:0.68rem; letter-spacing:0.1em; }
+        @media (max-width:900px) { nav { padding:1.25rem 1.5rem; } .page-header { padding:3rem 1.5rem 2rem; flex-direction:column; align-items:flex-start; gap:0.5rem; } .articles { grid-template-columns:1fr; } .article { border-right:none; border-bottom:1px solid var(--border); padding:2.5rem 1.5rem; } .article:nth-last-child(-n+2) { border-bottom:1px solid var(--border); } .article:last-child { border-bottom:none; } .article-img { margin:-2.5rem -1.5rem 2rem; height:140px; } .footer-bar { padding:1.25rem 1.5rem; flex-direction:column; gap:0.5rem; text-align:center; } }
+    </style>
+</head>
+<body><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMXX28QG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+    <a href="/" class="nav-logo">Dani Olmedo</a>
+    <a href="/" class="nav-back">← Volver al inicio</a>
+</nav>
+
+<div class="page-header">
+    <h1 class="page-title">THINKING</h1>
+    <span class="page-meta">Opiniones sin filtro</span>
+</div>
+
+<div class="articles">
+
+    <a href="/thinking/growth-diseno-error-startup/" class="article">
+        <div class="article-img">
+            <span class="article-img-word">WEIGHTLIFTING</span>
+            <span class="article-img-tag">#WEIGHTLIFTING</span>
+        </div>
+        <span class="article-badge">Thinking</span>
+        <div class="article-title">POR QUÉ SEPARAR GROWTH DE DISEÑO ES EL ERROR MÁS COSTOSO DE UNA STARTUP</div>
+        <p class="article-excerpt">Tienes un equipo de performance corriendo ads y un diseñador haciendo la marca. ¿Cuándo fue la última vez que los pusiste en la misma sala a hablar de la misma métrica?</p>
+        <span class="article-link">Leer →</span>
+    </a>
+
+    <a href="/thinking/performance-7-paises/" class="article">
+        <div class="article-img">
+            <span class="article-img-word">RELAY RACE</span>
+            <span class="article-img-tag">#RELAY RACE</span>
+        </div>
+        <span class="article-badge">Thinking</span>
+        <div class="article-title">LO QUE APRENDÍ CORRIENDO PERFORMANCE EN 7 PAÍSES AL MISMO TIEMPO</div>
+        <p class="article-excerpt">Cada mercado tiene su propia lógica. El error más común es asumir que lo que escaló en Chile va a escalar en México. Spoiler: casi nunca.</p>
+        <span class="article-link">Leer →</span>
+    </a>
+
+    <a href="/thinking/funnel-producto-founder/" class="article">
+        <div class="article-img">
+            <span class="article-img-word">MARATHON</span>
+            <span class="article-img-tag">#MARATHON</span>
+        </div>
+        <span class="article-badge">Thinking</span>
+        <div class="article-title">EL FOUNDER QUE NO ENTIENDE SU FUNNEL DE PRODUCTO NUNCA VA A ESCALAR</div>
+        <p class="article-excerpt">El problema no es la adquisición. Es lo que pasa después del clic, y la mayoría no lo mira hasta que el CAC se va a las nubes.</p>
+        <span class="article-link">Leer →</span>
+    </a>
+
+    <a href="/thinking/y-si-probamos-esto/" class="article">
+        <div class="article-img">
+            <span class="article-img-word">SPRINT</span>
+            <span class="article-img-tag">#SPRINT</span>
+        </div>
+        <span class="article-badge">Thinking</span>
+        <div class="article-title">"¿Y SI PROBAMOS ESTO?" — CUANDO PERFORMANCE Y DISEÑO CONFÍAN ENTRE SÍ, PASAN COSAS INESPERADAS</div>
+        <p class="article-excerpt">El anuncio al que menos tiempo le dedicamos fue el que más convirtió. Lo que aprendimos sobre la confianza entre performance y diseño en Cornershop.</p>
+        <span class="article-link">Leer →</span>
+    </a>
+
+</div>
+
+<div class="footer-bar">
+    <span>© 2026 Dani Olmedo</span>
+    <span>Growth · Diseño · Producto</span>
+    <span>Santiago, Chile</span>
+</div>
+
+</body>
+</html>
