@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KMXX28QG');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://daniolmedo.com/thinking/y-si-probamos-esto/">
+    <title>"¿Y si probamos esto?" — cuando performance y diseño confían entre sí, pasan cosas inesperadas — Dani Olmedo</title>
+    <meta name="description" content="El anuncio al que menos tiempo le dedicamos fue el que más convirtió. Lo que aprendí sobre la confianza entre performance y diseño en Cornershop.">
+    <meta property="og:title" content="¿Y si probamos esto? — cuando performance y diseño confían entre sí, pasan cosas inesperadas">
+    <meta property="og:description" content="El anuncio al que menos tiempo le dedicamos fue el que más convirtió. Lo que aprendí sobre la confianza entre performance y diseño en Cornershop.">
+    <meta property="og:image" content="https://daniolmedo.com/foto-hero.jpg">
+    <meta property="og:url" content="https://daniolmedo.com/thinking/y-si-probamos-esto/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="¿Y si probamos esto? — cuando performance y diseño confían entre sí, pasan cosas inesperadas">
+    <meta name="twitter:description" content="El anuncio al que menos tiempo le dedicamos fue el que más convirtió. Lo que aprendí sobre la confianza entre performance y diseño en Cornershop.">
+    <meta name="twitter:image" content="https://daniolmedo.com/foto-hero.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "¿Y si probamos esto? — cuando performance y diseño confían entre sí, pasan cosas inesperadas",
+      "description": "El anuncio al que menos tiempo le dedicamos fue el que más convirtió. Lo que aprendí sobre la confianza entre performance y diseño en Cornershop.",
+      "url": "https://daniolmedo.com/thinking/y-si-probamos-esto/",
+      "datePublished": "2026-01-01",
+      "author": {
+        "@type": "Person",
+        "name": "Dani Olmedo",
+        "url": "https://daniolmedo.com",
+        "sameAs": "https://www.linkedin.com/in/danielolmedofuentes/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Dani Olmedo",
+        "url": "https://daniolmedo.com"
+      },
+      "inLanguage": "es"
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A0A0A'/><text x='50' y='66' font-family='Arial Black,sans-serif' font-size='38' font-weight='900' fill='%23F0EDE4' text-anchor='middle' letter-spacing='-1'>DO</text></svg>">
+    <style>
+        :root { --cream:#F0EDE4; --black:#0A0A0A; --green:#111111; --muted:#8A8680; --border:rgba(10,10,10,0.10); }
+        *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+        html { scroll-behavior:smooth; }
+        body { background:var(--cream); color:var(--black); font-family:'Inter',sans-serif; font-weight:300; font-size:16px; line-height:1.6; overflow-x:hidden; }
+        nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:space-between; align-items:center; padding:1.5rem 3rem; background:var(--cream); border-bottom:1px solid var(--border); }
+        .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.12em; text-decoration:none; color:var(--black); }
+        .nav-back { font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; color:var(--muted); font-weight:500; transition:opacity 0.2s; }
+        .nav-back:hover { opacity:0.5; }
+        .article-photo { margin-top:65px; width:100%; height:62vh; min-height:380px; background:var(--black); position:relative; overflow:hidden; display:flex; align-items:flex-end; }
+        .photo-placeholder { width:100%; height:100%; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+        .photo-bg-word { font-family:'Bebas Neue',sans-serif; font-size:clamp(4rem,11vw,13rem); color:rgba(240,237,228,0.04); letter-spacing:0.04em; line-height:1; user-select:none; }
+        .photo-overlay { position:relative; z-index:2; padding:2.5rem 4rem; width:100%; }
+        .article-sport-tag { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(240,237,228,0.40); font-weight:600; margin-bottom:0.5rem; display:block; }
+        .article-section-tag { font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(240,237,228,0.3); font-weight:500; }
+        .article-wrap { max-width:720px; margin:0 auto; padding:5rem 2rem 4rem; }
+        .article-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.8rem,5.5vw,4.5rem); line-height:0.95; letter-spacing:0.02em; margin-bottom:3rem; }
+        .article-body p { font-size:1.05rem; line-height:1.85; color:#3A3835; margin-bottom:1.5rem; }
+        .article-body p strong { font-weight:600; color:var(--black); }
+        .article-body p em { font-style:italic; color:var(--muted); }
+        .article-body h2 { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.03em; margin:3rem 0 1.25rem; color:var(--black); }
+        .article-insight { border-left:2px solid var(--black); background:rgba(10,10,10,0.04); padding:1.5rem 2rem; margin:2.5rem 0; }
+        .article-insight p { font-size:1rem !important; font-weight:400 !important; color:var(--black) !important; font-style:italic; line-height:1.7 !important; margin:0 !important; }
+        .article-cta { background:var(--green); color:var(--cream); padding:5rem 4rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+        .cta-text { font-family:'Bebas Neue',sans-serif; font-size:clamp(2rem,3.5vw,3rem); line-height:1; margin-bottom:1rem; }
+        .cta-sub { font-size:0.9rem; color:rgba(240,237,228,0.5); font-weight:300; line-height:1.7; }
+        .cta-action { display:flex; flex-direction:column; gap:1rem; }
+        .btn-light { display:inline-flex; align-items:center; justify-content:space-between; gap:0.65rem; background:var(--cream); color:var(--green); padding:0.9rem 1.85rem; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; font-weight:600; transition:opacity 0.2s; }
+        .btn-light:hover { opacity:0.85; }
+        .footer-bar { background:var(--green); border-top:1px solid rgba(240,237,228,0.08); padding:1.5rem 3.5rem; display:flex; justify-content:space-between; align-items:center; color:rgba(240,237,228,0.3); font-size:0.68rem; letter-spacing:0.1em; }
+        .article-author{display:flex;align-items:center;gap:1rem;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border);}
+        .author-chip{width:34px;height:34px;background:var(--black);color:var(--cream);font-family:'Bebas Neue',sans-serif;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+        .author-details{display:flex;flex-direction:column;gap:0.15rem;}
+        .author-link{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--black);text-decoration:none;}.author-link:hover{opacity:0.5;}
+        .author-tagline{font-size:0.65rem;color:var(--muted);letter-spacing:0.06em;}.author-bio{font-size:0.7rem;color:var(--muted);line-height:1.5;margin-top:0.1rem;}
+        .article-share{display:flex;align-items:center;gap:0.65rem;flex-wrap:wrap;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
+        .share-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-right:0.25rem;}
+        .share-btn{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;color:var(--black);text-decoration:none;padding:0.45rem 0.85rem;border:1px solid rgba(10,10,10,0.18);transition:background 0.15s,color 0.15s;white-space:nowrap;cursor:pointer;background:transparent;font-family:inherit;}
+        .share-btn:hover{background:var(--black);color:var(--cream);}
+        .article-collab{margin-top:2rem;padding-top:1.75rem;border-top:1px solid var(--border);display:none;}
+        .article-collab:has(.collab-person){display:block;}
+        .collab-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;margin-bottom:0.65rem;}
+        .collab-list{display:flex;flex-wrap:wrap;gap:0.5rem;}
+        .collab-person{font-size:0.7rem;letter-spacing:0.08em;font-weight:500;color:var(--black);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid rgba(10,10,10,0.18);transition:background 0.15s,color 0.15s;}
+        .collab-person:hover{background:var(--black);color:var(--cream);}
+        @media (max-width:900px) { nav { padding:1.25rem 1.5rem; } .photo-overlay { padding:2rem 1.5rem; } .article-wrap { padding:3rem 1.5rem 3rem; } .article-cta { grid-template-columns:1fr; padding:3.5rem 1.5rem; gap:2rem; } .footer-bar { padding:1.25rem 1.5rem; flex-direction:column; gap:0.5rem; text-align:center; } }
+    </style>
+</head>
+<body><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMXX28QG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+    <a href="/" class="nav-logo">Dani Olmedo</a>
+    <a href="/#thinking" class="nav-back">← Volver a Thinking</a>
+</nav>
+
+<div class="article-photo">
+    <div class="photo-placeholder">
+        <!-- Reemplaza por imagen real si tienes una: <img src="/ruta-imagen.jpg" style="width:100%;height:100%;object-fit:cover;opacity:0.65;position:absolute;inset:0;"> -->
+        <span class="photo-bg-word">SPRINT</span>
+    </div>
+    <div class="photo-overlay">
+        <span class="article-sport-tag">#SPRINT</span>
+        <div class="article-section-tag">Thinking · Performance & Diseño</div>
+    </div>
+</div>
+
+<div class="article-wrap">
+    <h1 class="article-title">"¿Y SI PROBAMOS ESTO?" — CUANDO PERFORMANCE Y DISEÑO CONFÍAN ENTRE SÍ, PASAN COSAS INESPERADAS</h1>
+
+    <div class="article-author">
+        <div class="author-chip">DO</div>
+        <div class="author-details">
+            <a href="https://www.linkedin.com/in/danielolmedofuentes/" target="_blank" rel="noopener" class="author-link">Dani Olmedo</a>
+            <span class="author-tagline">Growth · Diseño · Producto</span>
+            <span class="author-bio">14 años en growth, performance y diseño de producto. Ex Cornershop by Uber · Ex Groupon LatAm.</span>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <p>Había una mesa de trabajo donde estábamos casi siempre juntos. Alegre, diseñador, y yo desde performance. No era un acuerdo formal ni un método documentado — era que compartíamos el mismo espacio y en algún punto empezamos a pasarnos las ideas antes de que se convirtieran en brief.</p>
+
+        <p>Cuando Lider se sumó a Cornershop, la noticia era grande. Por primera vez los usuarios podían hacer su compra de supermercado desde la app, al mismo precio que ir en persona. El mensaje que teníamos para comunicarlo era claro: énfasis en el beneficio, en que Lider estaba al mismo precio, en que algo concreto había cambiado para ellos.</p>
+
+        <p>Los ads que construimos primero iban exactamente en esa dirección. Lider en Cornershop, al mismo precio. Una propuesta de valor tan directa que el trabajo de diseño casi desaparecía — y en el buen sentido.</p>
+
+        <h2>La idea rara</h2>
+
+        <p>Un día, en esa misma mesa, le pregunté a Alegre: <em>¿y si probamos algo completamente distinto?</em></p>
+
+        <p>La idea era simple y un poco rara. Un cartel. No un banner digital bien producido — un cartel tipo letrero de supermercado, de los que se ven en los Lider más grandes de Chile o en los Walmart de Estados Unidos. Logo Lider. Tipografía de señalética de tienda. Texto directo. Sin fotografía de producto, sin persona, sin nada que lo hiciera "publicitario".</p>
+
+        <p>Ninguno de los dos apostaba mucho por él. Era el anuncio al que le habíamos dedicado menos tiempo de iteración. Alegre no lo defendió como concepto elegante y yo no lo presenté como hipótesis sólida — simplemente lo pusimos en la pauta junto a los otros.</p>
+
+        <p>Ganó claro.</p>
+
+        <h2>Por qué lo recuerdo</h2>
+
+        <p>No fue el más lindo de la campaña. Era, objetivamente, el más simple. Pero algo en ese formato funcionó: el usuario lo leyó exactamente como lo que era. No tuvo que interpretar nada. No había distancia entre el anuncio y el punto.</p>
+
+        <p>Lo que más recuerdo de ese momento no es el resultado — es lo que lo hizo posible. Alegre es de esos diseñadores que no bloquea una idea por ego, que no necesita ser el único origen de lo que sale. Y yo desde performance llevaba tiempo metiéndome en lo creativo, no para diseñar, sino para proponer hipótesis. Esa dinámica tenía que existir para que la pregunta <em>"¿y si probamos esto?"</em> tuviera espacio.</p>
+
+        <p>En muchos equipos esa pregunta no llega a hacerse. No porque nadie la tenga — sino porque el ambiente no la permite. El diseñador protege su territorio, el de performance se limita al copy y las métricas, y entre los dos existe una distancia que nadie cruza.</p>
+
+        <p>Cuando esa distancia desaparece, pasan cosas que no estaban en el plan.</p>
+
+        <div class="article-insight">
+            <p>El mejor anuncio no siempre es el más trabajado. A veces es el que hace la pregunta correcta en el formato correcto — y eso solo aparece cuando hay confianza para proponer lo que todavía no tiene forma.</p>
+        </div>
+
+        <div class="article-share">
+            <span class="share-label">Compartir</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdaniolmedo.com%2Fthinking%2Fy-si-probamos-esto%2F" target="_blank" rel="noopener" class="share-btn">LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdaniolmedo.com%2Fthinking%2Fy-si-probamos-esto%2F&text=%C2%BFY+si+probamos+esto%3F+%E2%80%94+cuando+performance+y+dise%C3%B1o+conf%C3%ADan+entre+s%C3%AD%2C+pasan+cosas+inesperadas" target="_blank" rel="noopener" class="share-btn">X / Twitter</a>
+            <a href="https://wa.me/?text=%C2%BFY+si+probamos+esto%3F+%E2%80%94+cuando+performance+y+dise%C3%B1o+conf%C3%ADan+entre+s%C3%AD%2C+pasan+cosas+inesperadas+%E2%86%92+https%3A%2F%2Fdaniolmedo.com%2Fthinking%2Fy-si-probamos-esto%2F" target="_blank" rel="noopener" class="share-btn">WhatsApp</a>
+            <button class="share-btn" onclick="navigator.clipboard.writeText('https://daniolmedo.com/thinking/y-si-probamos-esto/').then(()=>{this.textContent='¡Copiado!';setTimeout(()=>this.textContent='Copiar link',1500)})">Copiar link</button>
+        </div>
+
+        <div class="article-collab">
+            <span class="collab-label">En este proyecto</span>
+            <div class="collab-list">
+                <a href="https://www.linkedin.com/in/alegredesign/" target="_blank" rel="noopener" class="collab-person">Alegre</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article-cta">
+    <div>
+        <div class="cta-text">¿PERFORMANCE Y DISEÑO EN TU EQUIPO CORREN EN LA MISMA DIRECCIÓN?</div>
+        <p class="cta-sub">Esa distancia entre los dos tiene un costo concreto — en velocidad, en aprendizaje y en resultados.</p>
+    </div>
+    <div class="cta-action">
+        <a href="mailto:danielolmedo.fuentes@gmail.com?subject=Hola Dani, quiero hablar de performance y diseño" class="btn-light">
+            <span>Escríbeme un correo</span><span>→</span>
+        </a>
+        <a href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener" class="btn-light" style="background:transparent;color:var(--cream);border:1px solid rgba(240,237,228,0.3);">
+            <span>Agendemos 30 minutos</span><span>→</span>
+        </a>
+    </div>
+</div>
+
+<div class="footer-bar">
+    <span>© 2026 Dani Olmedo</span>
+    <span>Growth · Diseño · Producto</span>
+    <span>Santiago, Chile</span>
+</div>
+
+</body>
+</html>
