@@ -11,10 +11,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diagnóstico gratis · ¿Qué frena tu marca? · Dani Olmedo</title>
-<meta name="description" content="Responde 4 preguntas y deja la URL de tu sitio. Reviso tu marca y en 24 horas hábiles te mando un one page con ideas concretas. Sin costo.">
+<meta name="description" content="Respóndeme 6 cosas y en 24 horas hábiles te mando un one page con lo que yo haría primero. No necesitas tener sitio, pauta ni equipo. Sin costo.">
 <link rel="canonical" href="https://daniolmedo.com/diagnostico/">
 <meta property="og:title" content="Diagnóstico gratis · ¿Qué frena tu marca?">
-<meta property="og:description" content="4 preguntas y en 24 horas hábiles te mando un one page con lo que yo haría primero.">
+<meta property="og:description" content="6 respuestas y en 24 horas hábiles te mando un one page con lo que yo haría primero.">
 <meta property="og:url" content="https://daniolmedo.com/diagnostico/">
 <meta property="og:image" content="https://daniolmedo.com/foto-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,6 +60,32 @@ textarea{min-height:110px;resize:vertical}
 .note{font-size:13px;color:#6F6F6F;margin-top:20px;line-height:1.5}
 .note a{font-weight:600}
 @media (max-width:700px){.card{padding:28px}}
+
+.sub{font-size:15px;color:#6F6F6F;line-height:1.5;margin:-6px 0 24px}
+.opt{width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid #D9D7D5;background:#FFFFFF;color:#262626;font:inherit;font-size:14px;font-weight:500;cursor:pointer}
+.chip[aria-pressed="true"]{border-color:#262626;background:#FFF65D;font-weight:600}
+.pres{display:grid;gap:10px;margin-bottom:20px}
+.pres .field{display:none;padding:8px 0 0 20px}
+.pres .field.on{display:block}
+.pres .field input{margin-bottom:6px}
+.tip{display:none;font-size:14px;font-weight:600;background:#FFF65D;border-radius:14px;padding:12px 16px;margin-bottom:24px;line-height:1.5}
+.tip.on{display:block}
+.fichas{background:#F8F6F3;border-radius:20px;padding:20px;display:grid;gap:12px;margin-bottom:24px}
+.ficha{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 44px 44px 44px;gap:10px;align-items:center;font-size:14px;font-weight:600}
+.ficha .track{height:12px;background:#FFFFFF;border-radius:999px;overflow:hidden}
+.ficha .track i{display:block;height:100%;width:0;background:#262626;transition:width .25s}
+.ficha .pct{text-align:right}
+.rnd{width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;font-family:inherit;line-height:1}
+.rnd.m{border:1.5px solid #262626;background:#FFFFFF;color:#262626}
+.rnd.p{border:0;background:#262626;color:#FFFFFF}
+.q{font-size:14px;font-weight:600;margin:0 0 10px}
+.modo-box{display:none}.modo-box.on{display:block}
+.resumen{border-top:1px solid #EDEAE4;margin-bottom:28px}
+.resumen div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid #EDEAE4;font-size:15px;line-height:1.5}
+.pill{display:inline-block;font-size:12px;font-weight:600;background:#FFF65D;border-radius:999px;padding:6px 14px;margin-bottom:16px}
+@media (max-width:700px){.ficha{grid-template-columns:minmax(0,1fr) 44px 44px 44px}.ficha .track{display:none}.resumen div{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
@@ -67,106 +93,214 @@ textarea{min-height:110px;resize:vertical}
 <nav><div class="nav-in"><a class="logo" href="/">Dani Olmedo</a><a class="back" href="/">← Volver al sitio</a></div></nav>
 <main>
 <div class="box"><div class="card">
-<div class="top"><span id="progress">Gratis · 24 h hábiles</span><span>Diagnóstico</span></div>
+<div class="top"><span id="progress">Gratis · 24 h hábiles</span><span>Re: Tu diagnóstico gratis</span></div>
 <div class="bar"><i id="bar"></i></div>
-
 <form id="f" novalidate>
+
 <section class="step on" data-s="0">
-<h1>¿Qué está frenando tu marca?</h1>
-<p class="lead">Responde 4 preguntas y déjame la URL de tu sitio. Reviso tu marca y en 24 horas hábiles te mando un one page con ideas concretas. Sin costo.</p>
+<h1>Respóndeme 6 cosas y te mando un diagnóstico.</h1>
+<p class="lead">En 24 horas hábiles te llega un one page con lo que yo haría primero. No necesitas tener sitio, pauta ni equipo. Si algo no lo sabes, te lo saltas.</p>
 <ul class="list">
-<li>3 hallazgos concretos sobre tu sitio, mensaje y medición</li>
-<li>1 mejora que puedes hacer esta semana</li>
+<li>3 hallazgos concretos sobre tu mensaje, tus canales y tu medición</li>
+<li>1 mejora que puedes hacer esta semana, sin pagar nada</li>
 <li>Lo que no se puede ver sin acceso a tus cuentas, dicho sin rodeos</li>
 </ul>
-<button type="button" class="btn btn-dark" data-next>Empezar →</button>
+<button type="button" class="btn btn-dark" data-next>Responder</button>
 </section>
 
 <section class="step" data-s="1">
-<h2>Cuéntame de tu negocio</h2>
-<label for="url">URL de tu sitio</label>
-<input id="url" name="url" type="text" inputmode="url" placeholder="tumarca.cl" autocomplete="url">
-<p class="err" id="e1">Necesito la URL para revisar tu sitio.</p>
-<label for="rubro">¿Qué vendes y a quién?</label>
-<textarea id="rubro" name="rubro" placeholder="Ej: cosmética coreana para mujeres de 25 a 40, venta online en Chile"></textarea>
+<h2>Primero, ¿quién me escribe?</h2>
+<p class="sub">Así ajusto lo que te pregunto después.</p>
+<div class="opts" data-group="rol">
+<button type="button" class="opt" aria-pressed="false">Soy dueño o fundador</button>
+<button type="button" class="opt" aria-pressed="false">Trabajo en el equipo de marketing de la empresa</button>
+<button type="button" class="opt" aria-pressed="false">Soy agencia o freelance y busco apoyo</button>
+<button type="button" class="opt" aria-pressed="false">Estoy averiguando para otra persona</button>
+</div>
+<label for="rubro">¿Qué vende la marca y a quién?</label>
+<textarea id="rubro" placeholder="Ej: cosmética coreana para mujeres de 25 a 40, venta online en Chile"></textarea>
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></div>
 </section>
 
 <section class="step" data-s="2">
-<h2>¿En qué momento está tu negocio?</h2>
-<div class="opts" data-group="momento">
-<button type="button" class="opt" aria-pressed="true">Ya vendo, pero siento que todo está desordenado</button>
-<button type="button" class="opt" aria-pressed="false">Voy a lanzar una marca o producto nuevo</button>
-<button type="button" class="opt" aria-pressed="false">Ya invierto en pauta y quiero mejores resultados</button>
+<h2 id="q2">¿Dónde te encuentran hoy tus clientes?</h2>
+<p class="sub">Marca todo lo que aplique. ¿No tienes sitio? No es requisito, hay negocios muy buenos que viven en Instagram o en WhatsApp.</p>
+<div class="pres">
+<div><button type="button" class="opt" aria-pressed="false" data-p="web">+ Sitio web</button><div class="field"><label for="p-web">URL del sitio</label><input id="p-web" type="text" inputmode="url" placeholder="tumarca.cl"></div></div>
+<div><button type="button" class="opt" aria-pressed="false" data-p="ig">+ Instagram o TikTok</button><div class="field"><label for="p-ig">Usuario</label><input id="p-ig" type="text" placeholder="@tumarca"></div></div>
+<div><button type="button" class="opt" aria-pressed="false" data-p="mk">+ Marketplace (Mercado Libre, Falabella, Paris)</button><div class="field"><label for="p-mk">Link de la tienda</label><input id="p-mk" type="text" placeholder="Pega el link de tu tienda"></div></div>
+<div><button type="button" class="opt" aria-pressed="false" data-p="wa">+ WhatsApp y boca a boca</button></div>
+<div><button type="button" class="opt" aria-pressed="false" data-p="nada">+ Todavía nada, estoy por lanzar</button><div class="field"><label for="p-nada">¿Cómo se llama la marca o la idea?</label><input id="p-nada" type="text" placeholder="Un nombre tentativo vale"></div></div>
 </div>
+<p class="tip" id="tip-wa">Sin link no hay problema: reviso tu marca, tu competencia y cómo te encuentran en Google.</p>
+<p class="tip" id="tip-nada">Perfecto. Te armo el diagnóstico pensando en el lanzamiento, no en optimizar lo que todavía no existe.</p>
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></div>
 </section>
 
 <section class="step" data-s="3">
-<h2>¿Cuánto inviertes en pauta al mes?</h2>
-<p class="lead">Un rango aproximado basta. Sirve para calibrar las recomendaciones.</p>
-<div class="opts" data-group="inversion">
-<button type="button" class="opt" aria-pressed="false">Aún no invierto</button>
-<button type="button" class="opt" aria-pressed="true">Menos de $500 mil</button>
-<button type="button" class="opt" aria-pressed="false">$500 mil a $2 millones</button>
-<button type="button" class="opt" aria-pressed="false">Más de $2 millones</button>
+<h2 id="q3">¿En qué momento está tu negocio?</h2>
+<div class="opts" data-group="momento">
+<button type="button" class="opt" aria-pressed="false">Tengo una idea o estoy por lanzar</button>
+<button type="button" class="opt" aria-pressed="false">Ya vendo, pero todo está desordenado</button>
+<button type="button" class="opt" aria-pressed="false">Ya invierto en pauta y quiero mejores resultados</button>
+<button type="button" class="opt" aria-pressed="false">Crecí y necesito estructura o equipo</button>
 </div>
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></div>
 </section>
 
 <section class="step" data-s="4">
-<h2>¿Dónde te mando tu one page?</h2>
-<p class="lead">Lo reviso yo, no un bot. Si después quieres conversar, ya sé con quién hablo.</p>
-<label for="nombre">Tu nombre</label>
-<input id="nombre" name="nombre" type="text" autocomplete="name">
-<label for="email">Tu email</label>
-<input id="email" name="email" type="email" autocomplete="email" placeholder="tu@empresa.cl">
-<p class="err" id="e4">Revisa el email, parece que falta algo.</p>
-<div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="submit" class="btn btn-dark">Enviar →</button></div>
-<p class="note">Al enviar se abre tu correo con las respuestas listas. Solo tienes que darle enviar.</p>
+<h2>¿Dónde se va hoy la plata de marketing?</h2>
+<p class="sub">Tienes 10 fichas. Repártelas como repartes hoy tu presupuesto. No tiene que ser exacto.</p>
+<div class="chips" data-group="modo" data-single>
+<button type="button" class="chip" aria-pressed="true" data-m="reparto">Reparto lo que invierto</button>
+<button type="button" class="chip" aria-pressed="false" data-m="cero">Aún no invierto en pauta</button>
+<button type="button" class="chip" aria-pressed="false" data-m="nose">No sé, lo ve otra persona</button>
+</div>
+<div class="modo-box on" data-box="reparto">
+<div class="fichas" id="fichas"></div>
+<p class="q" id="fichas-msg" style="margin:-12px 0 24px">Te quedan 10 fichas.</p>
+<p class="q">¿Y cuánto es al mes, más o menos?</p>
+<div class="chips" data-group="rango" data-single>
+<button type="button" class="chip" aria-pressed="false">Menos de $500 mil</button>
+<button type="button" class="chip" aria-pressed="false">$500 mil a $2 millones</button>
+<button type="button" class="chip" aria-pressed="false">Más de $2 millones</button>
+<button type="button" class="chip" aria-pressed="false">Prefiero no decir</button>
+</div>
+</div>
+<div class="modo-box" data-box="cero"><p class="tip on">Bien. El one page va a priorizar lo que puedes hacer sin pauta: mensaje, sitio u orgánico.</p></div>
+<div class="modo-box" data-box="nose"><label for="quien">¿Quién lo ve? (opcional)</label><input id="quien" type="text" placeholder="Ej: una agencia, mi socio, el equipo de ventas"></div>
+<p class="q">¿Cuánto vende la empresa al año, aproximadamente?</p>
+<div class="chips" data-group="facturacion" data-single>
+<button type="button" class="chip" aria-pressed="false">Menos de $50 millones</button>
+<button type="button" class="chip" aria-pressed="false">$50 a $200 millones</button>
+<button type="button" class="chip" aria-pressed="false">$200 a $500 millones</button>
+<button type="button" class="chip" aria-pressed="false">Más de $500 millones</button>
+<button type="button" class="chip" aria-pressed="false">Prefiero no decir</button>
+</div>
+<div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><span><button type="button" class="link" data-next style="margin-right:16px">Saltar esta</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></span></div>
 </section>
 
 <section class="step" data-s="5">
-<h2>Ya casi. Falta un clic.</h2>
-<p class="lead">Se abrió tu correo con las respuestas. Dale enviar y en 24 horas hábiles te llega tu one page: sin relleno, con lo que yo haría primero.</p>
-<p class="lead" style="margin-bottom:20px">¿No se abrió? Copia tus respuestas y mándalas a <a href="mailto:danielolmedo.fuentes@gmail.com">danielolmedo.fuentes@gmail.com</a>.</p>
+<h2>¿Qué te quita el sueño?</h2>
+<p class="sub">Elige las que quieras. Esto define en qué me fijo primero.</p>
+<div class="chips" data-group="dolores">
+<button type="button" class="chip" aria-pressed="false">No sé qué funciona y qué no</button>
+<button type="button" class="chip" aria-pressed="false">Invierto y no veo ventas</button>
+<button type="button" class="chip" aria-pressed="false">Nadie conoce la marca</button>
+<button type="button" class="chip" aria-pressed="false">Mi sitio no convierte</button>
+<button type="button" class="chip" aria-pressed="false">No tengo tiempo ni equipo</button>
+<button type="button" class="chip" aria-pressed="false">No sé por dónde partir</button>
+</div>
+<label for="mas">¿Algo más que deba saber? (opcional)</label>
+<textarea id="mas" placeholder="Lo que le contarías a un amigo que sabe de marketing"></textarea>
+<div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><span><button type="button" class="link" data-next style="margin-right:16px">Saltar esta</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></span></div>
+</section>
+
+<section class="step" data-s="6">
+<h2>¿A qué correo te lo mando?</h2>
+<p class="sub">Lo reviso yo, no un bot. Si después quieres conversar, ya sé con quién hablo.</p>
+<label for="nombre">Tu nombre</label>
+<input id="nombre" type="text" autocomplete="name" placeholder="Cómo te digo">
+<label for="email">Email</label>
+<input id="email" type="email" autocomplete="email" placeholder="tu@empresa.cl">
+<p class="err" id="e6">Revisa el email, ahí te llega el one page.</p>
+<div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="submit" class="btn btn-dark" id="send">Enviar →</button></div>
+<p class="note">Uso tus respuestas solo para preparar tu diagnóstico.</p>
+</section>
+
+<section class="step" data-s="7">
+<p class="pill">Enviado</p>
+<h2>Listo. Te llega a tu correo en 24 horas hábiles.</h2>
+<p class="lead">Esto es lo que voy a mirar con lo que me contaste:</p>
+<div class="resumen" id="resumen"></div>
 <div class="nav-btns" style="justify-content:flex-start">
-<button type="button" class="btn btn-yellow" id="copy">Copiar respuestas</button>
-<a class="btn btn-dark" href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener">Prefiero agendar 30 minutos</a>
+<a class="btn btn-yellow" href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener">¿Prefieres no esperar? Agenda 30 min</a>
+<a class="btn btn-dark" href="/">Volver al sitio</a>
 </div>
 </section>
+
+<section class="step" data-s="8">
+<h2>Ya casi. Falta un clic.</h2>
+<p class="lead">Se abrió tu correo con las respuestas. Dale enviar y en 24 horas hábiles te llega tu one page.</p>
+<p class="lead" style="margin-bottom:20px">¿No se abrió? Copia tus respuestas y mándalas a <a href="mailto:danielolmedo.fuentes@gmail.com">danielolmedo.fuentes@gmail.com</a>.</p>
+<div class="nav-btns" style="justify-content:flex-start"><button type="button" class="btn btn-yellow" id="copy">Copiar respuestas</button><a class="btn btn-dark" href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener">Prefiero agendar 30 minutos</a></div>
+</section>
+
 </form>
 </div></div>
 </main>
 <script>
+/* CONFIGURACIÓN DEL GOOGLE FORM
+   Mientras FORM_URL esté vacío, el formulario usa el respaldo por mailto (como antes).
+   Para activarlo: pega la URL "formResponse" del Form y el código entry.XXXX de cada pregunta. */
+var FORM_URL='https://docs.google.com/forms/d/e/1FAIpQLSemjtV4bYGrjjFTVfaITG0MNy4IhZ-F_Q1rPYuoOQ4eBvvQCA/formResponse';
+var ENTRY={rol:'entry.945455196',rubro:'entry.2040971681',presencia:'entry.559755604',url_sitio:'entry.623408422',usuario_redes:'entry.1157926166',link_marketplace:'entry.53715749',nombre_marca:'entry.2030827804',momento:'entry.52204291',presupuesto_modo:'entry.1257386711',reparto:'entry.512253600',rango_pauta:'entry.1711885863',facturacion:'entry.1015962814',dolores:'entry.999570341',texto_libre:'entry.73069676',nombre:'entry.1475796929',email:'entry.641627655'};
 (function(){
-var steps=[].slice.call(document.querySelectorAll('.step')),cur=0,dl=window.dataLayer=window.dataLayer||[];
+var steps=[].slice.call(document.querySelectorAll('.step')),cur=0,TOTAL=6,dl=window.dataLayer=window.dataLayer||[];
 var bar=document.getElementById('bar'),prog=document.getElementById('progress');
+function $(id){return document.getElementById(id);}
+function val(id){return $(id).value.trim();}
 function show(n){steps[cur].classList.remove('on');cur=n;steps[cur].classList.add('on');
-bar.style.width=(Math.min(cur,4)/4*100)+'%';
-prog.textContent=cur===0?'Gratis · 24 h hábiles':(cur===5?'Casi listo':'Paso '+cur+' de 4');
+bar.style.width=(Math.min(cur,TOTAL)/TOTAL*100)+'%';
+prog.textContent=cur===0?'Gratis · 24 h hábiles':(cur===8?'Casi listo':cur>TOTAL?'Enviado':'Respuesta '+cur+' de '+TOTAL);
 window.scrollTo({top:0,behavior:'smooth'});dl.push({event:'diagnostico_step',step:cur});}
-function val(id){return document.getElementById(id).value.trim();}
-function picked(g){var b=document.querySelector('[data-group="'+g+'"] [aria-pressed="true"]');return b?b.textContent:'';}
-function ok(){
-if(cur===1&&!val('url')){document.getElementById('e1').style.display='block';return false;}
-document.getElementById('e1').style.display='none';return true;}
-document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){if(ok())show(cur+1);});});
+document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){show(cur+1);});});
 document.querySelectorAll('[data-prev]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
-document.querySelectorAll('.opts').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;
-g.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');});});
-function body(){return 'Hola Dani, quiero el diagnóstico.\n\n'+
-'Nombre: '+val('nombre')+'\nEmail: '+val('email')+'\nSitio: '+val('url')+'\nQué vendo y a quién: '+val('rubro')+
-'\nMomento: '+picked('momento')+'\nInversión mensual en pauta: '+picked('inversion')+'\n';}
-document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
-var em=val('email');if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){document.getElementById('e4').style.display='block';return;}
-document.getElementById('e4').style.display='none';
-dl.push({event:'diagnostico_submit',momento:picked('momento'),inversion:picked('inversion')});
-var subj='Diagnóstico · '+val('url');
-window.location.href='mailto:danielolmedo.fuentes@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body());
-show(5);});
-document.getElementById('copy').addEventListener('click',function(){var t=body(),b=this;
-(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copiado';},function(){window.prompt('Copia tus respuestas:',t);});});
+// selección única (opts y chips con data-single) y múltiple (dolores)
+document.querySelectorAll('.opts[data-group], .chips[data-group]').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+var single=g.classList.contains('opts')||g.hasAttribute('data-single');
+if(single){g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');}
+else{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');}
+if(g.dataset.group==='rol')adapt();
+if(g.dataset.group==='modo')document.querySelectorAll('.modo-box').forEach(function(x){x.classList.toggle('on',x.dataset.box===b.dataset.m);});});});
+function picked(g){return [].slice.call(document.querySelectorAll('[data-group="'+g+'"] [aria-pressed="true"]')).map(function(b){return b.textContent.trim();}).join(', ');}
+function idx(g){var bs=[].slice.call(document.querySelectorAll('[data-group="'+g+'"] button'));return bs.findIndex(function(b){return b.getAttribute('aria-pressed')==='true';});}
+function adapt(){var r=idx('rol');
+$('q2').textContent=r===2?'¿Dónde está hoy tu cliente?':(r===3?'¿Dónde está hoy esa marca?':'¿Dónde te encuentran hoy tus clientes?');
+$('q3').textContent='¿En qué momento está '+(r===2?'tu cliente':(r===3?'esa marca':'tu negocio'))+'?';}
+// presencia
+var pres={};
+document.querySelectorAll('[data-p]').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.p;
+if(k==='nada'){var on=!pres.nada;pres={};if(on)pres.nada=true;}else{delete pres.nada;pres[k]=!pres[k];}
+document.querySelectorAll('[data-p]').forEach(function(x){var o=!!pres[x.dataset.p];x.setAttribute('aria-pressed',o);x.textContent=(o?'✓ ':'+ ')+x.textContent.slice(2);var f=x.parentNode.querySelector('.field');if(f)f.classList.toggle('on',o);});
+$('tip-wa').classList.toggle('on',!!pres.wa&&!pres.web&&!pres.ig&&!pres.mk);$('tip-nada').classList.toggle('on',!!pres.nada);});});
+var PL={web:'Sitio web',ig:'Instagram o TikTok',mk:'Marketplace',wa:'WhatsApp y boca a boca',nada:'Todavía nada, por lanzar'};
+// fichas
+var CH=[['g','Google Ads'],['m','Meta (Instagram y Facebook)'],['t','TikTok'],['i','Influencers'],['a','Agencia o freelance'],['o','Otro']],F={};
+var fx=$('fichas');CH.forEach(function(c){F[c[0]]=0;var row=document.createElement('div');row.className='ficha';
+row.innerHTML='<span>'+c[1]+'</span><div class="track"><i></i></div><span class="pct">0%</span><button type="button" class="rnd m" aria-label="Quitar ficha a '+c[1]+'">−</button><button type="button" class="rnd p" aria-label="Agregar ficha a '+c[1]+'">+</button>';
+row.querySelector('.m').addEventListener('click',function(){if(F[c[0]]>0){F[c[0]]--;paint();}});
+row.querySelector('.p').addEventListener('click',function(){if(used()<10){F[c[0]]++;paint();}});
+row.dataset.k=c[0];fx.appendChild(row);});
+function used(){return CH.reduce(function(s,c){return s+F[c[0]];},0);}
+function paint(){fx.querySelectorAll('.ficha').forEach(function(r){var v=F[r.dataset.k]*10;r.querySelector('i').style.width=v+'%';r.querySelector('.pct').textContent=v+'%';});
+var l=10-used();$('fichas-msg').textContent=l===10?'Te quedan 10 fichas.':(l>0?'Te quedan '+l+' fichas. Si no suma 100%, igual me sirve.':'Repartido. Esto me ahorra media reunión.');}
+function reparto(){return CH.filter(function(c){return F[c[0]]>0;}).map(function(c){return c[1]+' '+F[c[0]]*10+'%';}).join(', ');}
+function modo(){var b=document.querySelector('[data-group="modo"] [aria-pressed="true"]');return b?b.dataset.m:'reparto';}
+function data(){var m=modo();return{
+rol:picked('rol'),rubro:val('rubro'),
+presencia:Object.keys(pres).filter(function(k){return pres[k];}).map(function(k){return PL[k];}).join(', '),
+url_sitio:pres.web?val('p-web'):'',usuario_redes:pres.ig?val('p-ig'):'',link_marketplace:pres.mk?val('p-mk'):'',nombre_marca:pres.nada?val('p-nada'):'',
+momento:picked('momento'),
+presupuesto_modo:m==='reparto'?'Reparte':(m==='cero'?'Aún no invierte':'No sabe, lo ve otra persona'+(val('quien')?' ('+val('quien')+')':'')),
+reparto:m==='reparto'?reparto():'',rango_pauta:m==='reparto'?picked('rango'):'',
+facturacion:picked('facturacion'),dolores:picked('dolores'),texto_libre:val('mas'),nombre:val('nombre'),email:val('email')};}
+function texto(d){return 'Hola Dani, quiero el diagnóstico.\n\n'+Object.keys(d).filter(function(k){return d[k];}).map(function(k){return k.replace(/_/g,' ')+': '+d[k];}).join('\n');}
+function resumen(d){var rows=[
+['Dónde miro',d.presencia?(pres.nada?'Tu marca o idea, y con quién vas a competir.':d.presencia+(pres.web?'.':'. Y cómo te encuentran en Google.')):'Tu marca, tu competencia y cómo te encuentran en Google.'],
+['Momento',d.momento||'Lo defino con tus respuestas.'],
+['Presupuesto',d.reparto||d.presupuesto_modo],
+['Lo urgente',d.dolores||'Lo que más se note al revisar.']];
+$('resumen').innerHTML='';rows.forEach(function(r){var x=document.createElement('div');var b=document.createElement('b');b.textContent=r[0];var s=document.createElement('span');s.textContent=r[1];x.appendChild(b);x.appendChild(s);$('resumen').appendChild(x);});}
+$('f').addEventListener('submit',function(e){e.preventDefault();
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('email'))){$('e6').style.display='block';return;}
+$('e6').style.display='none';var d=data();
+dl.push({event:'diagnostico_submit',momento:d.momento,inversion:d.rango_pauta||d.presupuesto_modo,facturacion:d.facturacion,presencia:d.presencia});
+if(FORM_URL&&ENTRY.email){var p=new URLSearchParams();Object.keys(ENTRY).forEach(function(k){if(ENTRY[k])p.append(ENTRY[k],d[k]||'');});
+$('send').disabled=true;$('send').textContent='Enviando…';
+fetch(FORM_URL,{method:'POST',mode:'no-cors',body:p}).then(function(){resumen(d);show(7);},function(){window.location.href='mailto:danielolmedo.fuentes@gmail.com?subject='+encodeURIComponent('Diagnóstico · '+(d.url_sitio||d.usuario_redes||d.nombre_marca||d.nombre))+'&body='+encodeURIComponent(texto(d));show(8);});}
+else{window.location.href='mailto:danielolmedo.fuentes@gmail.com?subject='+encodeURIComponent('Diagnóstico · '+(d.url_sitio||d.usuario_redes||d.nombre_marca||d.nombre))+'&body='+encodeURIComponent(texto(d));show(8);}});
+$('copy').addEventListener('click',function(){var t=texto(data()),b=this;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copiado';},function(){window.prompt('Copia tus respuestas:',t);});});
 })();
 </script>
 </body>
