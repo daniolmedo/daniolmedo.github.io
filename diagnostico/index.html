@@ -324,7 +324,7 @@ main{padding:16px 4vw 16px}
 <section class="step" data-s="8">
 <h2>Ya casi. Falta un clic.</h2>
 <p class="lead">Se abrió tu correo con las respuestas. Dale enviar y en 24 horas hábiles te llega tu one page.</p>
-<p class="lead" style="margin-bottom:20px">¿No se abrió? Copia tus respuestas y mándalas a <a href="mailto:danielolmedo.fuentes@gmail.com">danielolmedo.fuentes@gmail.com</a>.</p>
+<p class="lead" style="margin-bottom:20px">¿No se abrió? Copia tus respuestas y mándalas a <a href="mailto:dani@daniolmedo.com">dani@daniolmedo.com</a>.</p>
 <div class="nav-btns" style="justify-content:flex-start"><button type="button" class="btn btn-yellow" id="copy">Copiar respuestas</button><a class="btn btn-dark" href="https://calendar.app.google/AtiVzvw6tBLjNe2c6" target="_blank" rel="noopener">Prefiero agendar 30 minutos</a></div>
 </section>
 
@@ -406,8 +406,8 @@ $('e6').style.display='none';var d=data();
 dl.push({event:'diagnostico_submit',momento:d.momento,inversion:d.rango_pauta||d.presupuesto_modo,facturacion:d.facturacion,presencia:d.presencia});
 if(FORM_URL&&ENTRY.email){var p=new URLSearchParams();Object.keys(ENTRY).forEach(function(k){if(ENTRY[k])p.append(ENTRY[k],d[k]||'');});
 $('send').disabled=true;$('send').textContent='Enviando…';
-fetch(FORM_URL,{method:'POST',mode:'no-cors',body:p}).then(function(){resumen(d);show(7);},function(){window.location.href='mailto:danielolmedo.fuentes@gmail.com?subject='+encodeURIComponent('Diagnóstico · '+(d.url_sitio||d.usuario_redes||d.nombre_marca||d.nombre))+'&body='+encodeURIComponent(texto(d));show(8);});}
-else{window.location.href='mailto:danielolmedo.fuentes@gmail.com?subject='+encodeURIComponent('Diagnóstico · '+(d.url_sitio||d.usuario_redes||d.nombre_marca||d.nombre))+'&body='+encodeURIComponent(texto(d));show(8);}});
+fetch(FORM_URL,{method:'POST',mode:'no-cors',body:p}).then(function(){resumen(d);show(7);},function(){window.location.href='mailto:dani@daniolmedo.com?subject='+encodeURIComponent('Diagnóstico · '+(d.url_sitio||d.usuario_redes||d.nombre_marca||d.nombre))+'&body='+encodeURIComponent(texto(d));show(8);});}
+else{window.location.href='mailto:dani@daniolmedo.com?subject='+encodeURIComponent('Diagnóstico · '+(d.url_sitio||d.usuario_redes||d.nombre_marca||d.nombre))+'&body='+encodeURIComponent(texto(d));show(8);}});
 $('copy').addEventListener('click',function(){var t=texto(data()),b=this;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copiado';},function(){window.prompt('Copia tus respuestas:',t);});});
 })();
 </script>
