@@ -151,6 +151,37 @@ main{padding:16px 3vw 48px}
 .split .fichas{padding:8px;margin-bottom:12px}
 .split .step[data-s="4"] .q{margin-bottom:8px}
 }
+
+/* Escritorio: todo en una pantalla */
+@media (min-width:761px){
+main{padding:16px 4vw 16px}
+.box{padding:8px}
+.pane{height:clamp(440px,calc(100dvh - 116px),680px)}
+}
+@media (min-width:761px) and (max-height:820px){
+.pane{padding:26px 32px 92px}
+.side{padding:26px 28px;gap:10px}
+.side .lt{font-size:34px}
+.split .nav-btns{bottom:16px;padding-top:14px;left:32px;right:32px}
+.split .btn{min-height:46px}
+.split .step[data-s="0"] h1{font-size:44px;margin-bottom:12px}
+.split .lead{font-size:15px;margin-bottom:16px}
+.split .list{margin-bottom:18px;gap:6px}
+.split .list li{font-size:14px}
+.split .opts{gap:8px;margin-bottom:16px}
+.split .opt{min-height:44px;font-size:15px}
+.split .pres{gap:8px}
+.split textarea{min-height:64px;margin-bottom:8px}
+.split input{padding:11px 14px;margin-bottom:12px}
+.split label{margin-bottom:6px}
+.split .chip{min-height:38px;font-size:13px;padding:0 14px}
+.split .chips{gap:6px;margin-bottom:12px}
+.split .q{margin-bottom:8px}
+.split .fichas{margin-bottom:10px}
+.split .ficha{padding:8px 10px}
+.split .rnd{width:34px;height:34px}
+.split .tip{margin-bottom:12px;padding:10px 14px}
+}
 </style>
 </head>
 <body>
