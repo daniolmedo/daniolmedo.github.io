@@ -86,15 +86,85 @@ textarea{min-height:110px;resize:vertical}
 .resumen div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid #EDEAE4;font-size:15px;line-height:1.5}
 .pill{display:inline-block;font-size:12px;font-weight:600;background:#FFF65D;border-radius:999px;padding:6px 14px;margin-bottom:16px}
 @media (max-width:700px){.ficha{grid-template-columns:minmax(0,1fr) 44px 44px 44px}.ficha .track{display:none}.resumen div{grid-template-columns:1fr;gap:2px}}
+
+/* Layout dividido, tamaño fijo */
+.card.split{max-width:1040px;padding:0;display:grid;grid-template-columns:300px minmax(0,1fr);overflow:hidden}
+.side{background:#262626;color:#FFFFFF;padding:36px 32px;display:flex;flex-direction:column;gap:14px;border-radius:20px 0 0 20px}
+.side .lbl{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#FFF65D}
+.segs{display:flex;gap:4px}
+.segs i{display:block;height:4px;width:28px;border-radius:2px;background:#4A4846;transition:background .25s}
+.segs i.on{background:#FFF65D}
+.side .lt{margin:0;font-family:'Bebas Neue',sans-serif;font-size:40px;line-height:.95}
+.side .ls{margin:0;font-size:14px;line-height:1.55;color:#D9D7D5}
+.side .foot{margin-top:auto;font-size:12px;color:#A9A6A1}
+.pane{position:relative;height:680px;padding:36px 36px 112px;overflow-y:auto}
+.split .step.q>h2,.split .step.q>.sub{display:none}
+.split .nav-btns{position:absolute;left:36px;right:36px;bottom:24px;padding-top:18px;border-top:1px solid #EDEAE4;background:#FFFFFF}
+.split .step[data-s="0"] h1{font-size:clamp(40px,5vw,60px)}
+.split .fichas{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px}
+.split .ficha{grid-template-columns:minmax(0,1fr) 38px 38px;gap:8px;background:#FFFFFF;border-radius:14px;padding:10px 12px;font-size:13px}
+.split .ficha .track{display:none}
+.split .ficha .pct{grid-column:1;grid-row:2;text-align:left;color:#6F6F6F;font-weight:500;margin-top:-6px}
+.split .ficha .nm{grid-column:1;grid-row:1}
+.split .ficha .m{grid-column:2;grid-row:1 / span 2}
+.split .ficha .p{grid-column:3;grid-row:1 / span 2}
+.split .rnd{width:38px;height:38px;font-size:18px}
+.split .chips{margin-bottom:16px}
+@media (max-width:760px){
+.card.split{grid-template-columns:1fr}
+.side{border-radius:20px 20px 0 0;padding:16px 20px;height:150px;gap:4px;display:grid;grid-template-rows:28px 46px 36px}
+.side .lt{font-size:24px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;align-self:end}
+.side .ls{font-size:12px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;align-self:start}
+.side .foot{display:none}
+.side .hd{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.segs i{width:20px}
+.pane{height:600px;padding:20px 18px 96px}
+.split .nav-btns{left:18px;right:18px;bottom:14px}
+.split .fichas{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.opt{min-height:48px;font-size:15px}
+.chip{min-height:40px;padding:0 14px;font-size:13px}
+}
+
+.split .step[data-s="3"] .opts{margin-bottom:20px}
+@media (max-width:760px){
+.split .step[data-s="0"] h1{font-size:38px}
+.split .lead{font-size:15px;margin-bottom:18px}
+.split .list{margin-bottom:22px;gap:6px}
+.split .list li{font-size:14px}
+.split .ficha{grid-template-columns:minmax(0,1fr) 36px 36px;row-gap:6px;padding:10px}
+.split .ficha .nm{grid-column:1 / -1;grid-row:1}
+.split .ficha .pct{grid-column:1;grid-row:2;margin-top:0;align-self:center}
+.split .ficha .m{grid-column:2;grid-row:2}
+.split .ficha .p{grid-column:3;grid-row:2}
+.split .rnd{width:36px;height:36px}
+.split .step[data-s="4"] .chips[data-group="modo"] .chip{min-height:36px;font-size:12px;padding:0 12px}
+}
+
+@media (max-width:760px){
+.box{padding:8px}
+main{padding:16px 3vw 48px}
+.split .chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.split .chips[data-group="modo"]{grid-template-columns:repeat(3,minmax(0,1fr))}
+.split .chip{min-height:40px;padding:6px 10px;line-height:1.2;white-space:normal;font-size:12.5px}
+.split .step[data-s="4"] .chips[data-group="modo"] .chip{min-height:44px;font-size:12px;padding:4px 8px}
+.split .ficha{padding:8px 10px;row-gap:4px}
+.split .fichas{padding:8px;margin-bottom:12px}
+.split .step[data-s="4"] .q{margin-bottom:8px}
+}
 </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMXX28QG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav><div class="nav-in"><a class="logo" href="/">Dani Olmedo</a><a class="back" href="/">← Volver al sitio</a></div></nav>
 <main>
-<div class="box"><div class="card">
-<div class="top"><span id="progress">Gratis · 24 h hábiles</span><span>Re: Tu diagnóstico gratis</span></div>
-<div class="bar"><i id="bar"></i></div>
+<div class="box"><div class="card split">
+<aside class="side" aria-live="polite">
+<div class="hd"><span class="lbl" id="progress">Gratis · 2 min</span><div class="segs" id="segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<p class="lt" id="lt">Tu diagnóstico gratis</p>
+<p class="ls" id="ls">6 respuestas, 2 minutos. Lo que no sepas, te lo saltas.</p>
+<p class="foot">Lo reviso yo, no un bot.</p>
+</aside>
+<div class="pane">
 <form id="f" novalidate>
 
 <section class="step on" data-s="0">
@@ -108,7 +178,7 @@ textarea{min-height:110px;resize:vertical}
 <button type="button" class="btn btn-dark" data-next>Responder</button>
 </section>
 
-<section class="step" data-s="1">
+<section class="step q" data-s="1">
 <h2>Primero, ¿quién me escribe?</h2>
 <p class="sub">Así ajusto lo que te pregunto después.</p>
 <div class="opts" data-group="rol">
@@ -122,9 +192,9 @@ textarea{min-height:110px;resize:vertical}
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></div>
 </section>
 
-<section class="step" data-s="2">
+<section class="step q" data-s="2">
 <h2 id="q2">¿Dónde te encuentran hoy tus clientes?</h2>
-<p class="sub">Marca todo lo que aplique. ¿No tienes sitio? No es requisito, hay negocios muy buenos que viven en Instagram o en WhatsApp.</p>
+<p class="sub">Marca todo lo que aplique. Tener sitio no es requisito.</p>
 <div class="pres">
 <div><button type="button" class="opt" aria-pressed="false" data-p="web">+ Sitio web</button><div class="field"><label for="p-web">URL del sitio</label><input id="p-web" type="text" inputmode="url" placeholder="tumarca.cl"></div></div>
 <div><button type="button" class="opt" aria-pressed="false" data-p="ig">+ Instagram o TikTok</button><div class="field"><label for="p-ig">Usuario</label><input id="p-ig" type="text" placeholder="@tumarca"></div></div>
@@ -137,18 +207,27 @@ textarea{min-height:110px;resize:vertical}
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></div>
 </section>
 
-<section class="step" data-s="3">
+<section class="step q" data-s="3">
 <h2 id="q3">¿En qué momento está tu negocio?</h2>
+<p class="sub">Elige la que más se parezca.</p>
 <div class="opts" data-group="momento">
 <button type="button" class="opt" aria-pressed="false">Tengo una idea o estoy por lanzar</button>
 <button type="button" class="opt" aria-pressed="false">Ya vendo, pero todo está desordenado</button>
 <button type="button" class="opt" aria-pressed="false">Ya invierto en pauta y quiero mejores resultados</button>
 <button type="button" class="opt" aria-pressed="false">Crecí y necesito estructura o equipo</button>
 </div>
+<p class="q">¿Cuánto vende la empresa al año, aproximadamente?</p>
+<div class="chips" data-group="facturacion" data-single>
+<button type="button" class="chip" aria-pressed="false">Menos de $50 millones</button>
+<button type="button" class="chip" aria-pressed="false">$50 a $200 millones</button>
+<button type="button" class="chip" aria-pressed="false">$200 a $500 millones</button>
+<button type="button" class="chip" aria-pressed="false">Más de $500 millones</button>
+<button type="button" class="chip" aria-pressed="false">Prefiero no decir</button>
+</div>
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></div>
 </section>
 
-<section class="step" data-s="4">
+<section class="step q" data-s="4">
 <h2>¿Dónde se va hoy la plata de marketing?</h2>
 <p class="sub">Tienes 10 fichas. Repártelas como repartes hoy tu presupuesto. No tiene que ser exacto.</p>
 <div class="chips" data-group="modo" data-single>
@@ -169,18 +248,10 @@ textarea{min-height:110px;resize:vertical}
 </div>
 <div class="modo-box" data-box="cero"><p class="tip on">Bien. El one page va a priorizar lo que puedes hacer sin pauta: mensaje, sitio u orgánico.</p></div>
 <div class="modo-box" data-box="nose"><label for="quien">¿Quién lo ve? (opcional)</label><input id="quien" type="text" placeholder="Ej: una agencia, mi socio, el equipo de ventas"></div>
-<p class="q">¿Cuánto vende la empresa al año, aproximadamente?</p>
-<div class="chips" data-group="facturacion" data-single>
-<button type="button" class="chip" aria-pressed="false">Menos de $50 millones</button>
-<button type="button" class="chip" aria-pressed="false">$50 a $200 millones</button>
-<button type="button" class="chip" aria-pressed="false">$200 a $500 millones</button>
-<button type="button" class="chip" aria-pressed="false">Más de $500 millones</button>
-<button type="button" class="chip" aria-pressed="false">Prefiero no decir</button>
-</div>
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><span><button type="button" class="link" data-next style="margin-right:16px">Saltar esta</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></span></div>
 </section>
 
-<section class="step" data-s="5">
+<section class="step q" data-s="5">
 <h2>¿Qué te quita el sueño?</h2>
 <p class="sub">Elige las que quieras. Esto define en qué me fijo primero.</p>
 <div class="chips" data-group="dolores">
@@ -196,7 +267,7 @@ textarea{min-height:110px;resize:vertical}
 <div class="nav-btns"><button type="button" class="link" data-prev>← Atrás</button><span><button type="button" class="link" data-next style="margin-right:16px">Saltar esta</button><button type="button" class="btn btn-dark" data-next>Siguiente →</button></span></div>
 </section>
 
-<section class="step" data-s="6">
+<section class="step q" data-s="6">
 <h2>¿A qué correo te lo mando?</h2>
 <p class="sub">Lo reviso yo, no un bot. Si después quieres conversar, ya sé con quién hablo.</p>
 <label for="nombre">Tu nombre</label>
@@ -227,6 +298,7 @@ textarea{min-height:110px;resize:vertical}
 </section>
 
 </form>
+</div>
 </div></div>
 </main>
 <script>
@@ -237,12 +309,17 @@ var FORM_URL='https://docs.google.com/forms/d/e/1FAIpQLSemjtV4bYGrjjFTVfaITG0MNy
 var ENTRY={rol:'entry.945455196',rubro:'entry.2040971681',presencia:'entry.559755604',url_sitio:'entry.623408422',usuario_redes:'entry.1157926166',link_marketplace:'entry.53715749',nombre_marca:'entry.2030827804',momento:'entry.52204291',presupuesto_modo:'entry.1257386711',reparto:'entry.512253600',rango_pauta:'entry.1711885863',facturacion:'entry.1015962814',dolores:'entry.999570341',texto_libre:'entry.73069676',nombre:'entry.1475796929',email:'entry.641627655'};
 (function(){
 var steps=[].slice.call(document.querySelectorAll('.step')),cur=0,TOTAL=6,dl=window.dataLayer=window.dataLayer||[];
-var bar=document.getElementById('bar'),prog=document.getElementById('progress');
+var prog=document.getElementById('progress');
+function side(){var st=steps[cur],h=st.querySelector('h2'),sb=st.querySelector('.sub');
+[].slice.call(document.querySelectorAll('#segs i')).forEach(function(x,i){x.classList.toggle('on',cur>TOTAL||i<cur);});
+prog.textContent=cur===0?'Gratis · 2 min':(cur===8?'Casi listo':cur>TOTAL?'Enviado':'Paso '+cur+' de '+TOTAL);
+var t={0:['Tu diagnóstico gratis','6 respuestas, 2 minutos. Lo que no sepas, te lo saltas.'],7:['Enviado','Te llega a tu correo en 24 horas hábiles.'],8:['Falta un clic','Se abrió tu correo con las respuestas listas.']}[cur];
+document.getElementById('lt').textContent=t?t[0]:(h?h.textContent:'');
+document.getElementById('ls').textContent=t?t[1]:(sb?sb.textContent:'');}
 function $(id){return document.getElementById(id);}
 function val(id){return $(id).value.trim();}
 function show(n){steps[cur].classList.remove('on');cur=n;steps[cur].classList.add('on');
-bar.style.width=(Math.min(cur,TOTAL)/TOTAL*100)+'%';
-prog.textContent=cur===0?'Gratis · 24 h hábiles':(cur===8?'Casi listo':cur>TOTAL?'Enviado':'Respuesta '+cur+' de '+TOTAL);
+side();
 window.scrollTo({top:0,behavior:'smooth'});dl.push({event:'diagnostico_step',step:cur});}
 document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){show(cur+1);});});
 document.querySelectorAll('[data-prev]').forEach(function(b){b.addEventListener('click',function(){show(cur-1);});});
@@ -257,7 +334,7 @@ function picked(g){return [].slice.call(document.querySelectorAll('[data-group="
 function idx(g){var bs=[].slice.call(document.querySelectorAll('[data-group="'+g+'"] button'));return bs.findIndex(function(b){return b.getAttribute('aria-pressed')==='true';});}
 function adapt(){var r=idx('rol');
 $('q2').textContent=r===2?'¿Dónde está hoy tu cliente?':(r===3?'¿Dónde está hoy esa marca?':'¿Dónde te encuentran hoy tus clientes?');
-$('q3').textContent='¿En qué momento está '+(r===2?'tu cliente':(r===3?'esa marca':'tu negocio'))+'?';}
+$('q3').textContent='¿En qué momento está '+(r===2?'tu cliente':(r===3?'esa marca':'tu negocio'))+'?';side();}
 // presencia
 var pres={};
 document.querySelectorAll('[data-p]').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.p;
@@ -266,9 +343,9 @@ document.querySelectorAll('[data-p]').forEach(function(x){var o=!!pres[x.dataset
 $('tip-wa').classList.toggle('on',!!pres.wa&&!pres.web&&!pres.ig&&!pres.mk);$('tip-nada').classList.toggle('on',!!pres.nada);});});
 var PL={web:'Sitio web',ig:'Instagram o TikTok',mk:'Marketplace',wa:'WhatsApp y boca a boca',nada:'Todavía nada, por lanzar'};
 // fichas
-var CH=[['g','Google Ads'],['m','Meta (Instagram y Facebook)'],['t','TikTok'],['i','Influencers'],['a','Agencia o freelance'],['o','Otro']],F={};
+var CH=[['g','Google Ads','Google'],['m','Meta (Instagram y Facebook)','Meta'],['t','TikTok','TikTok'],['i','Influencers','Influencers'],['a','Agencia o freelance','Agencia'],['o','Otro','Otro']],F={};
 var fx=$('fichas');CH.forEach(function(c){F[c[0]]=0;var row=document.createElement('div');row.className='ficha';
-row.innerHTML='<span>'+c[1]+'</span><div class="track"><i></i></div><span class="pct">0%</span><button type="button" class="rnd m" aria-label="Quitar ficha a '+c[1]+'">−</button><button type="button" class="rnd p" aria-label="Agregar ficha a '+c[1]+'">+</button>';
+row.innerHTML='<span class="nm">'+c[2]+'</span><div class="track"><i></i></div><span class="pct">0%</span><button type="button" class="rnd m" aria-label="Quitar ficha a '+c[1]+'">−</button><button type="button" class="rnd p" aria-label="Agregar ficha a '+c[1]+'">+</button>';
 row.querySelector('.m').addEventListener('click',function(){if(F[c[0]]>0){F[c[0]]--;paint();}});
 row.querySelector('.p').addEventListener('click',function(){if(used()<10){F[c[0]]++;paint();}});
 row.dataset.k=c[0];fx.appendChild(row);});
