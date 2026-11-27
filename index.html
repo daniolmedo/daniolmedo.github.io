@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script>document.documentElement.className+=" js"</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -176,6 +177,47 @@ footer a{color:#6F6F6F;font-weight:600}
   .feat,.cta{padding:28px}
   .track span{padding:0 28px}
 }
+
+/* BANDEJA */
+.notif{position:absolute;z-index:2;top:24px;right:24px;left:24px;max-width:380px;margin-left:auto;background:rgba(255,255,255,.96);border-radius:18px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 10px 28px rgba(0,0,0,.2)}
+.notif .n{flex:0 0 36px;height:36px;border-radius:10px;background:#FFF65D;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:20px}
+.notif b{display:block;margin:0 0 2px;font-size:13px}
+.notif span.tx{font-size:13px;line-height:1.45;color:#4A4846}
+#bandeja{margin-top:32px}
+#bandeja .bhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:12px}
+#bandeja h2{margin:0 0 6px;font-size:64px;line-height:.9}
+#bandeja .bsub{font-size:14px;color:#4A4846}
+.vertodo{background:none;border:0;padding:0;font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;line-height:1.4;color:#262626;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.inbox{border:1.5px solid #EDEAE4;border-radius:24px;overflow:hidden}
+.mail{display:flex;gap:16px;align-items:center;width:100%;padding:20px 24px;border:0;border-bottom:1px solid #EDEAE4;background:#FFFEF2;cursor:pointer;font-family:Inter,system-ui,sans-serif;font-size:15px;font-weight:600;color:#262626;text-align:left}
+.mail:last-child{border-bottom:0}
+.mail:hover{background:#FFFCE3}
+.mail .dot{width:10px;height:10px;flex:0 0 10px;border-radius:50%;background:#262626}
+.mail .from{flex:0 0 140px}
+.mail .subj{flex:1 1 auto;min-width:0}
+.mail .prev{font-weight:400;color:#6F6F6F}
+.mail .time{font-size:12px;font-weight:400;color:#6F6F6F}
+.mail.read{background:#FFFFFF;font-weight:400}
+.mail.read .dot{background:transparent}
+.js .mail-sec{display:none}
+.js .mail-sec.open{display:block}
+.mail-note{display:inline-block;margin:0 0 20px;font-size:14px;font-weight:600;background:#FFF65D;border-radius:999px;padding:6px 14px}
+#logos{padding-top:96px}
+#logos .logos{margin-top:0}
+.end-note{padding:24px 0 32px}
+.end-note .k{font-size:13px;font-weight:600;color:#6F6F6F;margin-bottom:6px}
+.end-note .t{font-family:'Bebas Neue',sans-serif;font-size:48px;line-height:.9;margin-bottom:6px}
+.end-note .s{font-size:16px;line-height:1.5;color:#4A4846;max-width:560px}
+@media (max-width:700px){
+  #bandeja h2{font-size:52px}
+  .mail{padding:16px 18px;gap:12px;flex-wrap:wrap}
+  .mail .from{flex:1 1 auto;order:1}
+  .mail .time{order:2}
+  .mail .dot{order:0}
+  .mail .subj{flex:1 1 100%;order:3;padding-left:22px}
+  .mail .prev{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .notif{top:16px;right:16px;left:16px}
+}
 </style>
 </head>
 <body>
@@ -208,9 +250,23 @@ footer a{color:#6F6F6F;font-weight:600}
 <a class="btn btn-yellow" href="/diagnostico/" data-cta="hero_diagnostico">Diagnóstico gratis</a>
 </div>
 </div></div>
-<div class="hero-img"><img src="/foto-hero.jpg" alt="Dani Olmedo" width="1254" height="1254" fetchpriority="high"></div>
+<div class="hero-img"><img src="/foto-hero.jpg" alt="Dani Olmedo" width="1254" height="1254" fetchpriority="high">
+<div class="notif" role="note"><span class="n" aria-hidden="true">4</span><div><b>Dani Olmedo · 4 correos nuevos</b><span class="tx">Armé este sitio como bandeja de entrada. Ábrelos aquí abajo, o salta al final.</span></div></div></div>
 </header>
 
+<section id="bandeja" aria-label="Bandeja de entrada">
+<div class="bhead"><div><h2>Bandeja de entrada</h2><p class="bsub">Me gusta que el marketing se pueda jugar. Cada correo abre una parte del sitio. <b id="unread">4 sin leer</b></p></div><button type="button" class="vertodo" id="vertodo">Prefiero ver todo de una</button></div>
+<div class="inbox">
+<button type="button" class="mail" data-open="logos"><span class="dot" aria-hidden="true"></span><span class="from">Dani Olmedo</span><span class="subj">Mi CV, pero en logos <span class="prev">· Humo, sí. Pero puedes revisarlo en mi LinkedIn.</span></span><span class="time">9:41</span></button>
+<button type="button" class="mail" data-open="servicios"><span class="dot" aria-hidden="true"></span><span class="from">Dani + Claude</span><span class="subj">Re: Re: Re: ¿cómo trabajamos? <span class="prev">· Yo pienso y reviso. Claude resume el hilo y no pide vacaciones.</span></span><span class="time">Ayer</span></button>
+<button type="button" class="mail" data-open="trabajo"><span class="dot" aria-hidden="true"></span><span class="from">Dani Olmedo</span><span class="subj">El shooting más barato que llegó a Vogue <span class="prev">· Más 3 casos que te cuento con datos.</span></span><span class="time">Lun</span></button>
+<button type="button" class="mail" data-open="blog"><span class="dot" aria-hidden="true"></span><span class="from">Dani Olmedo</span><span class="subj">5 lecciones que aprendí pagando caro <span class="prev">· Para que tú no tengas que pagarlas.</span></span><span class="time">Dom</span></button>
+</div>
+</section>
+
+<section id="logos" class="mail-sec" data-mail="logos">
+<div class="sec-head"><h2>Con contrato y con factura</h2><a class="btn btn-outline" href="https://www.linkedin.com/in/danielolmedofuentes/" target="_blank" rel="noopener" data-cta="logos_linkedin">Ver mi LinkedIn ↗</a></div>
+<p class="mail-note">¿Te parece humo? Está todo en mi LinkedIn, con fechas y cargos.</p>
 <div class="logos" aria-label="Marcas con las que trabajé">
 <div class="track">
 <span><img src="/logos/cornershop-wordmark.png" alt="Cornershop" style="height:22px"></span>
@@ -234,11 +290,14 @@ footer a{color:#6F6F6F;font-weight:600}
 </div>
 </div>
 
-<section id="servicios">
+</section>
+
+<section id="servicios" class="mail-sec" data-mail="servicios">
 <div class="sec-head">
 <h2>Así trabajamos, paso a paso.</h2>
 <p class="muted">Entras donde estés y tomas solo lo que necesitas.</p>
 </div>
+<p class="mail-note">Hilo resumido por Claude, revisado por mí. Así trabajamos.</p>
 <div class="steps">
 <div class="step first">
 <span class="n">0</span>
@@ -273,12 +332,13 @@ footer a{color:#6F6F6F;font-weight:600}
 </div>
 </section>
 
-<section id="trabajo">
+<section id="trabajo" class="mail-sec" data-mail="trabajo">
 <span id="work"></span>
 <div class="sec-head">
 <div><p class="eyebrow">Casos</p><h2>En la cancha</h2></div>
 <a class="btn btn-outline" href="/trabajo/">Ver todo</a>
 </div>
+<p class="mail-note">Presupuesto del shooting: una casa prestada y mascarillas. Resultado: Vogue México.</p>
 <div class="cards">
 <a class="case" href="/trabajo/cornershop-mensajes-adquisicion/">
 <div class="lab"><span>Cornershop · Growth + Creatividad</span></div>
@@ -303,12 +363,13 @@ footer a{color:#6F6F6F;font-weight:600}
 </div>
 </section>
 
-<section id="blog">
+<section id="blog" class="mail-sec" data-mail="blog">
 <span id="thinking"></span>
 <div class="sec-head">
 <div><h2 style="margin-bottom:8px">Blog</h2><p class="muted" style="font-size:16px">Notas cortas sobre growth, marca y producto. Una idea por artículo.</p></div>
 <a class="btn btn-outline" href="/thinking/">Ver todos</a>
 </div>
+<p class="mail-note">Cupón aplicado: 100% de descuento. Sí, aprendí en Groupon.</p>
 <div class="posts">
 <a class="feat" href="/thinking/y-si-probamos-esto/">
 <div style="flex:1 1 360px"><div class="meta"><span class="pill-y">Lo último</span><span style="font-size:13px;font-weight:600;color:#A9A6A1">Growth + Diseño · 3 min</span></div>
@@ -323,6 +384,7 @@ footer a{color:#6F6F6F;font-weight:600}
 </div>
 </section>
 
+<div class="end-note" aria-live="polite"><p class="k" id="end-k">0 de 4 leídos</p><p class="t" id="end-t">Directo al grano.</p><p class="s" id="end-s">Igual llegaste al final. Eres de los que van al punto, y eso me sirve.</p></div>
 <span id="contact"></span>
 <section id="contacto">
 <div class="cta cta-diag">
@@ -344,6 +406,26 @@ footer a{color:#6F6F6F;font-weight:600}
 </footer>
 
 </main>
+<script>
+(function(){
+var dl=window.dataLayer=window.dataLayer||[];
+var K=['logos','servicios','trabajo','blog'],read={};
+var ends=[['0 de 4 leídos','Directo al grano.','Igual llegaste al final. Eres de los que van al punto, y eso me sirve.'],['1 de 4 leídos','Buen comienzo.','Sigue, que el mejor correo no siempre es el primero.'],['2 de 4 leídos','Vas en la mitad.','Si fueras una campaña, ya te estaría escalando.'],['3 de 4 leídos','Te queda uno.','El que más se demora, como siempre.'],['Bandeja en cero','Leíste todo.','Una de las campañas que más disfrutamos con el equipo de Cornershop fue la del Día del Completo. ¿Revisamos la tuya?']];
+function paint(){var n=K.filter(function(k){return read[k];}).length;
+document.getElementById('unread').textContent=(4-n)+' sin leer';
+document.getElementById('end-k').textContent=ends[n][0];document.getElementById('end-t').textContent=ends[n][1];document.getElementById('end-s').textContent=ends[n][2];return n;}
+function open(k,scroll,src){if(K.indexOf(k)<0)return;var sec=document.querySelector('[data-mail="'+k+'"]');
+var first=!read[k];read[k]=true;sec.classList.add('open');
+var b=document.querySelector('[data-open="'+k+'"]');if(b)b.classList.add('read');
+var n=paint();if(first&&src)dl.push({event:'bandeja_open',mail_id:k,leidos:n,origen:src});
+if(scroll)sec.scrollIntoView({behavior:'smooth',block:'start'});}
+document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-open'),true,'bandeja');});});
+document.getElementById('vertodo').addEventListener('click',function(){K.forEach(function(k){open(k,false,null);});dl.push({event:'bandeja_ver_todo'});document.getElementById('logos').scrollIntoView({behavior:'smooth',block:'start'});});
+var alias={work:'trabajo',thinking:'blog'};
+document.addEventListener('click',function(e){var a=e.target.closest('a[href*="#"]');if(!a)return;var h=a.getAttribute('href').split('#')[1];h=alias[h]||h;if(K.indexOf(h)>-1){e.preventDefault();open(h,true,'link');history.replaceState(null,'','#'+h);}});
+var h=(location.hash||'').slice(1);h=alias[h]||h;if(K.indexOf(h)>-1){open(h,true,'link');}
+})();
+</script>
 <script>
 document.addEventListener('click',function(e){var a=e.target.closest('[data-cta]');if(!a)return;(window.dataLayer=window.dataLayer||[]).push({event:'cta_click',cta_id:a.getAttribute('data-cta'),cta_url:a.href});});
 </script>
